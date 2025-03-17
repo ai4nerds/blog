@@ -1,6 +1,10 @@
 [
   {
-    "listing": "/concepts/index.html",
+    "listing": "/prompting/index.html",
+    "items": []
+  },
+  {
+    "listing": "/ml/index.html",
     "items": []
   },
   {
@@ -8,15 +12,11 @@
     "items": []
   },
   {
-    "listing": "/finetuning/index.html",
-    "items": []
-  },
-  {
-    "listing": "/prompting/index.html",
-    "items": []
-  },
-  {
     "listing": "/llm/index.html",
+    "items": []
+  },
+  {
+    "listing": "/concepts/index.html",
     "items": []
   },
   {
@@ -24,7 +24,7 @@
     "items": []
   },
   {
-    "listing": "/ml/index.html",
+    "listing": "/finetuning/index.html",
     "items": []
   }
 ]

@@ -1,35 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://ai4nerds.github.io/concepts/index.html</loc>
-    <lastmod>2025-03-17T12:07:21.135Z</lastmod>
-  </url>
-  <url>
-    <loc>https://ai4nerds.github.io/rag/index.html</loc>
-    <lastmod>2025-03-17T12:07:21.140Z</lastmod>
-  </url>
-  <url>
-    <loc>https://ai4nerds.github.io/finetuning/index.html</loc>
-    <lastmod>2025-03-17T12:07:21.135Z</lastmod>
-  </url>
-  <url>
     <loc>https://ai4nerds.github.io/prompting/index.html</loc>
-    <lastmod>2025-03-17T12:07:21.139Z</lastmod>
-  </url>
-  <url>
-    <loc>https://ai4nerds.github.io/llm/index.html</loc>
-    <lastmod>2025-03-17T12:07:21.137Z</lastmod>
-  </url>
-  <url>
-    <loc>https://ai4nerds.github.io/projects/index.html</loc>
-    <lastmod>2025-03-17T12:07:21.138Z</lastmod>
-  </url>
-  <url>
-    <loc>https://ai4nerds.github.io/index.html</loc>
-    <lastmod>2025-03-17T12:07:21.136Z</lastmod>
+    <lastmod>2025-03-17T12:18:50.006Z</lastmod>
   </url>
   <url>
     <loc>https://ai4nerds.github.io/ml/index.html</loc>
-    <lastmod>2025-03-17T12:07:21.138Z</lastmod>
+    <lastmod>2025-03-17T12:18:50.005Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ai4nerds.github.io/rag/index.html</loc>
+    <lastmod>2025-03-17T12:18:50.006Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ai4nerds.github.io/llm/index.html</loc>
+    <lastmod>2025-03-17T12:18:50.005Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ai4nerds.github.io/index.html</loc>
+    <lastmod>2025-03-17T12:18:50.005Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ai4nerds.github.io/concepts/index.html</loc>
+    <lastmod>2025-03-17T12:18:50.005Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ai4nerds.github.io/projects/index.html</loc>
+    <lastmod>2025-03-17T12:18:50.005Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ai4nerds.github.io/finetuning/index.html</loc>
+    <lastmod>2025-03-17T12:18:50.005Z</lastmod>
   </url>
 </urlset>
