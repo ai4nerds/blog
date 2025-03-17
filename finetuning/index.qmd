@@ -1,0 +1,30 @@
+---
+title: "Finetuning"
+listing:
+  contents: 
+    - "*.qmd"
+    - "*.ipynb"
+  sort: "date desc"
+  type: grid
+  categories: false
+  sort-ui: true
+  filter-ui: true
+  image-height: 250px
+  page-size: 9
+  feed: true
+page-layout: full
+title-block-banner: true
+---
+
+::: {.section-card .finetuning-section}
+## Welcome to Finetuning
+
+This section covers various techniques for adapting pre-trained language models to specific tasks and domains. Learn about different approaches to fine-tuning, from full parameter tuning to more efficient methods.
+
+- **Full Fine-tuning**: Techniques for updating all model parameters
+- **Parameter-Efficient Fine-tuning (PEFT)**: Methods like LoRA, adapters, and prompt tuning
+- **Instruction Tuning**: Aligning models with human instructions
+- **Domain Adaptation**: Specializing models for specific domains
+:::
+
+## All Finetuning Posts 

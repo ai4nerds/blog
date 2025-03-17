@@ -1,0 +1,30 @@
+---
+title: "End-to-End Projects"
+listing:
+  contents: 
+    - "*.qmd"
+    - "*.ipynb"
+  sort: "date desc"
+  type: grid
+  categories: false
+  sort-ui: true
+  filter-ui: true
+  image-height: 250px
+  page-size: 9
+  feed: true
+page-layout: full
+title-block-banner: true
+---
+
+::: {.section-card .projects-section}
+## Welcome to End-to-End Projects
+
+This section showcases complete AI projects from conception to deployment. Each project demonstrates the integration of various AI techniques to solve real-world problems.
+
+- **Application Development**: Building complete AI-powered applications
+- **System Architecture**: Designing robust AI systems
+- **Deployment Strategies**: Methods for deploying AI models to production
+- **Case Studies**: Real-world examples and lessons learned
+:::
+
+## All Projects 

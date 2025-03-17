@@ -1,0 +1,198 @@
+/* css styles */
+
+/* Custom styles for Uday's AI Blog */
+
+/* Main color scheme */
+:root {
+  --prompting-color: #4a6fa5;
+  --prompting-light: #e0e8f5;
+  --finetuning-color: #6b8e23;
+  --finetuning-light: #e8f0d8;
+  --rag-color: #8a2be2;
+  --rag-light: #f0e6fa;
+  --projects-color: #ff7f50;
+  --projects-light: #ffefe9;
+  --concepts-color: #20b2aa;
+  --concepts-light: #e5f5f4;
+  --background-color: #f8f9fa;
+  --text-color: #333;
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+/* Remove duplicate title */
+.quarto-title {
+  display: none;
+}
+
+/* Section styling */
+.section-card {
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.section-card:hover {
+  transform: translateY(-5px);
+}
+
+.prompting-section {
+  background-color: var(--prompting-light);
+  border-left: 5px solid var(--prompting-color);
+}
+
+.finetuning-section {
+  background-color: var(--finetuning-light);
+  border-left: 5px solid var(--finetuning-color);
+}
+
+.rag-section {
+  background-color: var(--rag-light);
+  border-left: 5px solid var(--rag-color);
+}
+
+.projects-section {
+  background-color: var(--projects-light);
+  border-left: 5px solid var(--projects-color);
+}
+
+.concepts-section {
+  background-color: var(--concepts-light);
+  border-left: 5px solid var(--concepts-color);
+}
+
+.section-card h3 {
+  margin-top: 0;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.prompting-section h3 {
+  color: var(--prompting-color);
+}
+
+.finetuning-section h3 {
+  color: var(--finetuning-color);
+}
+
+.rag-section h3 {
+  color: var(--rag-color);
+}
+
+.projects-section h3 {
+  color: var(--projects-color);
+}
+
+.concepts-section h3 {
+  color: var(--concepts-color);
+}
+
+/* Post listings */
+.listing-category {
+  background-color: transparent;
+  color: var(--text-color);
+  font-weight: normal;
+  padding: 3px 8px;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+}
+
+.quarto-listing-category.category-default {
+  background-color: transparent;
+  color: var(--text-color);
+}
+
+/* Banner styling */
+.quarto-title-banner {
+  background: linear-gradient(135deg, var(--prompting-color), var(--concepts-color));
+  color: white;
+}
+
+/* Navigation */
+.navbar {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.nav-link {
+  font-weight: 500;
+}
+
+/* Post cards */
+.card {
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* Home page section links */
+.section-link {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 8px 16px;
+  background-color: var(--projects-color);
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.section-link:hover {
+  background-color: #e06a43;
+  text-decoration: none;
+}
+
+.prompting-link {
+  background-color: var(--prompting-color);
+}
+
+.prompting-link:hover {
+  background-color: #3a5a84;
+}
+
+.finetuning-link {
+  background-color: var(--finetuning-color);
+}
+
+.finetuning-link:hover {
+  background-color: #556f1c;
+}
+
+.rag-link {
+  background-color: var(--rag-color);
+}
+
+.rag-link:hover {
+  background-color: #6a1cb2;
+}
+
+.projects-link {
+  background-color: var(--projects-color);
+}
+
+.projects-link:hover {
+  background-color: #e06a43;
+}
+
+.concepts-link {
+  background-color: var(--concepts-color);
+}
+
+.concepts-link:hover {
+  background-color: #198f89;
+}
+
+/* Hide code tools */
+.code-tools-button {
+  display: none !important;
+}

@@ -1,0 +1,196 @@
+---
+title: "AI4Nerds"
+page-layout: full
+title-block-banner: true
+---
+
+## Welcome to AI4Nerds
+
+This blog is dedicated to sharing insights, tutorials, and explorations in the field of Artificial Intelligence.
+
+:::: {.columns}
+
+::: {.column width="48%"}
+::: {.section-card .prompting-section}
+### Prompting and Generation Control
+
+Explore techniques for effective prompt engineering and controlling the generation process of large language models.
+
+```{python}
+#| echo: false
+#| output: asis
+import os
+import glob
+import json
+import re
+
+def get_notebook_title(notebook_path):
+    try:
+        with open(notebook_path, 'r', encoding='utf-8') as f:
+            notebook = json.load(f)
+        
+        # Try to find title in metadata
+        if 'cells' in notebook:
+            for cell in notebook['cells']:
+                if cell['cell_type'] == 'markdown':
+                    content = ''.join(cell['source'])
+                    if '---' in content:
+                        match = re.search(r'title:\s*"([^"]+)"', content)
+                        if match:
+                            return match.group(1)
+        
+        # If no title found, use filename
+        return os.path.basename(notebook_path).replace('.ipynb', '').replace('-', ' ').replace('_', ' ')
+    except:
+        return os.path.basename(notebook_path).replace('.ipynb', '').replace('-', ' ').replace('_', ' ')
+
+# Get prompting notebooks
+prompting_notebooks = glob.glob('prompting/*.ipynb')
+prompting_notebooks = sorted(prompting_notebooks, key=os.path.getmtime, reverse=True)[:2]
+
+if prompting_notebooks:
+    print("#### Recent Posts\n\n")
+    for nb in prompting_notebooks:
+        title = get_notebook_title(nb)
+        link = nb.replace('.ipynb', '.html')
+        print(f"- [{title}]({link})\n")
+else:
+    print("#### Coming Soon\n\n")
+    print("- No posts yet. Check back soon!\n")
+```
+
+<a href="/prompting/" class="section-link prompting-link">View all posts →</a>
+:::
+:::
+
+::: {.column width="4%"}
+:::
+
+::: {.column width="48%"}
+::: {.section-card .finetuning-section}
+### Finetuning
+
+Learn about different approaches to fine-tuning language models, from full parameter tuning to more efficient methods.
+
+```{python}
+#| echo: false
+#| output: asis
+
+# Get finetuning notebooks
+finetuning_notebooks = glob.glob('finetuning/*.ipynb')
+finetuning_notebooks = sorted(finetuning_notebooks, key=os.path.getmtime, reverse=True)[:2]
+
+if finetuning_notebooks:
+    print("#### Recent Posts\n\n")
+    for nb in finetuning_notebooks:
+        title = get_notebook_title(nb)
+        link = nb.replace('.ipynb', '.html')
+        print(f"- [{title}]({link})\n")
+else:
+    print("#### Coming Soon\n\n")
+    print("- No posts yet. Check back soon!\n")
+```
+
+<a href="/finetuning/" class="section-link finetuning-link">View all posts →</a>
+:::
+:::
+
+::::
+
+:::: {.columns .mt-4}
+
+::: {.column width="48%"}
+::: {.section-card .rag-section}
+### Retrieval-Augmented Generation (RAG)
+
+Discover how to enhance language models by retrieving relevant information from external knowledge sources.
+
+```{python}
+#| echo: false
+#| output: asis
+
+# Get RAG notebooks
+rag_notebooks = glob.glob('rag/*.ipynb')
+rag_notebooks = sorted(rag_notebooks, key=os.path.getmtime, reverse=True)[:2]
+
+if rag_notebooks:
+    print("#### Recent Posts\n\n")
+    for nb in rag_notebooks:
+        title = get_notebook_title(nb)
+        link = nb.replace('.ipynb', '.html')
+        print(f"- [{title}]({link})\n")
+else:
+    print("#### Coming Soon\n\n")
+    print("- No posts yet. Check back soon!\n")
+```
+
+<a href="/rag/" class="section-link rag-link">View all posts →</a>
+:::
+:::
+
+::: {.column width="4%"}
+:::
+
+::: {.column width="48%"}
+::: {.section-card .projects-section}
+### End-to-End Projects
+
+Explore complete AI projects from conception to deployment, demonstrating the integration of various AI techniques.
+
+```{python}
+#| echo: false
+#| output: asis
+
+# Get projects notebooks
+projects_notebooks = glob.glob('projects/*.ipynb')
+projects_notebooks = sorted(projects_notebooks, key=os.path.getmtime, reverse=True)[:2]
+
+if projects_notebooks:
+    print("#### Recent Posts\n\n")
+    for nb in projects_notebooks:
+        title = get_notebook_title(nb)
+        link = nb.replace('.ipynb', '.html')
+        print(f"- [{title}]({link})\n")
+else:
+    print("#### Coming Soon\n\n")
+    print("- No posts yet. Check back soon!\n")
+```
+
+<a href="/projects/" class="section-link projects-link">View all posts →</a>
+:::
+:::
+
+::::
+
+:::: {.columns .mt-4}
+
+::: {.column width="100%"}
+::: {.section-card .concepts-section}
+### ML & DL Concepts
+
+Explore fundamental concepts in Machine Learning and Deep Learning, including algorithms, architectures, and evaluation methods.
+
+```{python}
+#| echo: false
+#| output: asis
+
+# Get concepts notebooks
+concepts_notebooks = glob.glob('concepts/*.ipynb')
+concepts_notebooks = sorted(concepts_notebooks, key=os.path.getmtime, reverse=True)[:3]
+
+if concepts_notebooks:
+    print("#### Recent Posts\n\n")
+    for nb in concepts_notebooks:
+        title = get_notebook_title(nb)
+        link = nb.replace('.ipynb', '.html')
+        print(f"- [{title}]({link})\n")
+else:
+    print("#### Coming Soon\n\n")
+    print("- No posts yet. Check back soon!\n")
+```
+
+<a href="/concepts/" class="section-link concepts-link">View all posts →</a>
+:::
+:::
+
+::::

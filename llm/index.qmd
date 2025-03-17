@@ -1,0 +1,30 @@
+---
+title: "Large Language Models (LLM)"
+listing:
+  contents: 
+    - "*.qmd"
+    - "*.ipynb"
+  sort: "date desc"
+  type: grid
+  categories: false
+  sort-ui: true
+  filter-ui: true
+  image-height: 250px
+  page-size: 9
+  feed: true
+page-layout: full
+title-block-banner: true
+---
+
+::: {.section-card .llm-section}
+## Welcome to the LLM Section
+
+This section is dedicated to Large Language Models (LLMs), their applications, fine-tuning techniques, and more. Browse through the posts below to learn about the latest advancements in LLM technology.
+
+- **Fine-tuning Techniques**: Learn how to adapt pre-trained models for specific tasks
+- **Prompt Engineering**: Discover strategies for effective prompt design
+- **Applications**: Explore real-world applications of LLMs
+- **Architecture**: Understand the inner workings of transformer-based models
+:::
+
+## All LLM Posts 

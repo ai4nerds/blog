@@ -1,1 +1,1 @@
-# blog
+Check the blog at - https://udibhaskar.github.io/aiblog/

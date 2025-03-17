@@ -1,0 +1,21 @@
+/*-- scss:defaults --*/
+
+// Colors
+$prompting-color: #4a6fa5;
+$finetuning-color: #6b8e23;
+$rag-color: #8a2be2;
+$projects-color: #ff7f50;
+$concepts-color: #20b2aa;
+$background-color: #f8f9fa;
+$text-color: #333;
+
+// Set Bootstrap variables
+$primary: $prompting-color;
+$secondary: $finetuning-color;
+$success: $concepts-color;
+$info: $rag-color;
+$warning: $projects-color;
+
+/*-- scss:rules --*/
+
+// Additional custom styles can go here if needed 

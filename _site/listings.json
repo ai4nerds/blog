@@ -1,0 +1,30 @@
+[
+  {
+    "listing": "/concepts/index.html",
+    "items": []
+  },
+  {
+    "listing": "/projects/index.html",
+    "items": []
+  },
+  {
+    "listing": "/llm/index.html",
+    "items": []
+  },
+  {
+    "listing": "/prompting/index.html",
+    "items": []
+  },
+  {
+    "listing": "/finetuning/index.html",
+    "items": []
+  },
+  {
+    "listing": "/rag/index.html",
+    "items": []
+  },
+  {
+    "listing": "/ml/index.html",
+    "items": []
+  }
+]

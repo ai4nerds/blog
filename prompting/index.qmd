@@ -1,0 +1,30 @@
+---
+title: "Prompting and Generation Control"
+listing:
+  contents: 
+    - "*.qmd"
+    - "*.ipynb"
+  sort: "date desc"
+  type: grid
+  categories: false
+  sort-ui: true
+  filter-ui: true
+  image-height: 250px
+  page-size: 9
+  feed: true
+page-layout: full
+title-block-banner: true
+---
+
+::: {.section-card .prompting-section}
+## Welcome to Prompting and Generation Control
+
+This section focuses on techniques for effective prompt engineering and controlling the generation process of large language models. Learn how to craft prompts that yield better results and methods to guide model outputs.
+
+- **Prompt Engineering**: Strategies for designing effective prompts
+- **Generation Parameters**: Understanding temperature, top-p, and other parameters
+- **Output Control**: Methods to guide and constrain model outputs
+- **Chain-of-Thought**: Techniques for improving reasoning in LLMs
+:::
+
+## All Prompting Posts 

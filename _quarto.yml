@@ -1,0 +1,25 @@
+project:
+  type: website
+  output-dir: _site
+
+
+website:
+  title: "AI4Nerds"
+  site-url: https://ai4nerds.github.io/
+  navbar:
+    background: primary
+    search: true
+    right:
+      - icon: github
+        href: https://github.com/ai4nerds
+
+format:
+  html:
+    theme: 
+      - cosmo
+      - theme.scss
+    css: styles.css
+    toc: true
+    code-copy: false
+    code-tools: false
+    highlight-style: github
