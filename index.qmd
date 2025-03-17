@@ -1,12 +1,19 @@
 ---
 title: "AI4Nerds"
 page-layout: full
-title-block-banner: true
+title-block-banner: false
 ---
 
-## Welcome to AI4Nerds
+::: {.welcome-note}
+### About Us
+We are a team of four passionate developers exploring the frontiers of open-source AI. Our focus is on Large Language Models (LLMs) and their practical applications. Through this blog, we share our hands-on experiences, insights, and discoveries in:
 
-This blog is dedicated to sharing insights, tutorials, and explorations in the field of Artificial Intelligence.
+- LLM Fine-tuning & Optimization
+- Prompt Engineering
+- RAG Systems
+- Open-source AI Tools
+- End-to-end AI Applications
+:::
 
 :::: {.columns}
 
@@ -67,39 +74,6 @@ else:
 :::
 
 ::: {.column width="48%"}
-::: {.section-card .finetuning-section}
-### Finetuning
-
-Learn about different approaches to fine-tuning language models, from full parameter tuning to more efficient methods.
-
-```{python}
-#| echo: false
-#| output: asis
-
-# Get finetuning notebooks
-finetuning_notebooks = glob.glob('finetuning/*.ipynb')
-finetuning_notebooks = sorted(finetuning_notebooks, key=os.path.getmtime, reverse=True)[:2]
-
-if finetuning_notebooks:
-    print("#### Recent Posts\n\n")
-    for nb in finetuning_notebooks:
-        title = get_notebook_title(nb)
-        link = nb.replace('.ipynb', '.html')
-        print(f"- [{title}]({link})\n")
-else:
-    print("#### Coming Soon\n\n")
-    print("- No posts yet. Check back soon!\n")
-```
-
-<a href="/finetuning/" class="section-link finetuning-link">View all posts →</a>
-:::
-:::
-
-::::
-
-:::: {.columns .mt-4}
-
-::: {.column width="48%"}
 ::: {.section-card .rag-section}
 ### Retrieval-Augmented Generation (RAG)
 
@@ -125,6 +99,39 @@ else:
 ```
 
 <a href="/rag/" class="section-link rag-link">View all posts →</a>
+:::
+:::
+
+::::
+
+:::: {.columns .mt-4}
+
+::: {.column width="48%"}
+::: {.section-card .finetuning-section}
+### Finetuning
+
+Learn about different approaches to fine-tuning language models, from full parameter tuning to more efficient methods.
+
+```{python}
+#| echo: false
+#| output: asis
+
+# Get finetuning notebooks
+finetuning_notebooks = glob.glob('finetuning/*.ipynb')
+finetuning_notebooks = sorted(finetuning_notebooks, key=os.path.getmtime, reverse=True)[:2]
+
+if finetuning_notebooks:
+    print("#### Recent Posts\n\n")
+    for nb in finetuning_notebooks:
+        title = get_notebook_title(nb)
+        link = nb.replace('.ipynb', '.html')
+        print(f"- [{title}]({link})\n")
+else:
+    print("#### Coming Soon\n\n")
+    print("- No posts yet. Check back soon!\n")
+```
+
+<a href="/finetuning/" class="section-link finetuning-link">View all posts →</a>
 :::
 :::
 
@@ -164,7 +171,7 @@ else:
 
 :::: {.columns .mt-4}
 
-::: {.column width="100%"}
+::: {.column width="48%"}
 ::: {.section-card .concepts-section}
 ### ML & DL Concepts
 
@@ -176,7 +183,7 @@ Explore fundamental concepts in Machine Learning and Deep Learning, including al
 
 # Get concepts notebooks
 concepts_notebooks = glob.glob('concepts/*.ipynb')
-concepts_notebooks = sorted(concepts_notebooks, key=os.path.getmtime, reverse=True)[:3]
+concepts_notebooks = sorted(concepts_notebooks, key=os.path.getmtime, reverse=True)[:2]
 
 if concepts_notebooks:
     print("#### Recent Posts\n\n")
@@ -190,6 +197,38 @@ else:
 ```
 
 <a href="/concepts/" class="section-link concepts-link">View all posts →</a>
+:::
+:::
+
+::: {.column width="4%"}
+:::
+
+::: {.column width="48%"}
+::: {.section-card .llm-section}
+### LLM Deep Dives
+
+Explore in-depth analyses of Large Language Models, their architectures, and innovative applications.
+
+```{python}
+#| echo: false
+#| output: asis
+
+# Get LLM notebooks
+llm_notebooks = glob.glob('llm/*.ipynb')
+llm_notebooks = sorted(llm_notebooks, key=os.path.getmtime, reverse=True)[:2]
+
+if llm_notebooks:
+    print("#### Recent Posts\n\n")
+    for nb in llm_notebooks:
+        title = get_notebook_title(nb)
+        link = nb.replace('.ipynb', '.html')
+        print(f"- [{title}]({link})\n")
+else:
+    print("#### Coming Soon\n\n")
+    print("- No posts yet. Check back soon!\n")
+```
+
+<a href="/llm/" class="section-link llm-link">View all posts →</a>
 :::
 :::
 

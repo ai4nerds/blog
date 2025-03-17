@@ -1,35 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://ai4nerds.github.io/concepts/index.html</loc>
-    <lastmod>2025-03-17T12:07:21.135Z</lastmod>
+    <loc>https://ai4nerds.github.io/blog/concepts/index.html</loc>
+    <lastmod>2025-03-17T12:25:32.567Z</lastmod>
   </url>
   <url>
-    <loc>https://ai4nerds.github.io/rag/index.html</loc>
-    <lastmod>2025-03-17T12:07:21.140Z</lastmod>
+    <loc>https://ai4nerds.github.io/blog/rag/index.html</loc>
+    <lastmod>2025-03-17T12:25:32.585Z</lastmod>
   </url>
   <url>
-    <loc>https://ai4nerds.github.io/finetuning/index.html</loc>
-    <lastmod>2025-03-17T12:07:21.135Z</lastmod>
+    <loc>https://ai4nerds.github.io/blog/finetuning/index.html</loc>
+    <lastmod>2025-03-17T12:25:32.567Z</lastmod>
   </url>
   <url>
-    <loc>https://ai4nerds.github.io/prompting/index.html</loc>
-    <lastmod>2025-03-17T12:07:21.139Z</lastmod>
+    <loc>https://ai4nerds.github.io/blog/prompting/index.html</loc>
+    <lastmod>2025-03-17T12:25:32.571Z</lastmod>
   </url>
   <url>
-    <loc>https://ai4nerds.github.io/llm/index.html</loc>
-    <lastmod>2025-03-17T12:07:21.137Z</lastmod>
+    <loc>https://ai4nerds.github.io/blog/llm/index.html</loc>
+    <lastmod>2025-03-17T12:25:32.569Z</lastmod>
   </url>
   <url>
-    <loc>https://ai4nerds.github.io/projects/index.html</loc>
-    <lastmod>2025-03-17T12:07:21.138Z</lastmod>
+    <loc>https://ai4nerds.github.io/blog/projects/index.html</loc>
+    <lastmod>2025-03-17T12:25:32.570Z</lastmod>
   </url>
   <url>
-    <loc>https://ai4nerds.github.io/index.html</loc>
-    <lastmod>2025-03-17T12:07:21.136Z</lastmod>
+    <loc>https://ai4nerds.github.io/blog/index.html</loc>
+    <lastmod>2025-03-17T13:00:11.757Z</lastmod>
   </url>
   <url>
-    <loc>https://ai4nerds.github.io/ml/index.html</loc>
-    <lastmod>2025-03-17T12:07:21.138Z</lastmod>
+    <loc>https://ai4nerds.github.io/blog/ml/index.html</loc>
+    <lastmod>2025-03-17T12:25:32.569Z</lastmod>
   </url>
 </urlset>

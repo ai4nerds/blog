@@ -10,6 +10,7 @@ website:
   navbar:
     background: primary
     search: true
+    pinned: true
     right:
       - icon: github
         href: https://github.com/ai4nerds/blog
