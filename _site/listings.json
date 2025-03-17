@@ -4,15 +4,7 @@
     "items": []
   },
   {
-    "listing": "/projects/index.html",
-    "items": []
-  },
-  {
-    "listing": "/llm/index.html",
-    "items": []
-  },
-  {
-    "listing": "/prompting/index.html",
+    "listing": "/rag/index.html",
     "items": []
   },
   {
@@ -20,7 +12,15 @@
     "items": []
   },
   {
-    "listing": "/rag/index.html",
+    "listing": "/prompting/index.html",
+    "items": []
+  },
+  {
+    "listing": "/llm/index.html",
+    "items": []
+  },
+  {
+    "listing": "/projects/index.html",
     "items": []
   },
   {
