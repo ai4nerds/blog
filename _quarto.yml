@@ -5,13 +5,14 @@ project:
 
 website:
   title: "AI4Nerds"
-  site-url: https://ai4nerds.github.io/
+  site-url: https://ai4nerds.github.io/blog
+  repo-url: https://github.com/ai4nerds/blog
   navbar:
     background: primary
     search: true
     right:
       - icon: github
-        href: https://github.com/ai4nerds
+        href: https://github.com/ai4nerds/blog
 
 format:
   html:

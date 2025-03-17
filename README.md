@@ -1,1 +1,1 @@
-Check the blog at - https://udibhaskar.github.io/aiblog/
+Check the blog at - https://ai4nerds.github.io/blog
