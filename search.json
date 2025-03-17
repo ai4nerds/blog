@@ -1,0 +1,163 @@
+[
+  {
+    "objectID": "concepts/index.html",
+    "href": "concepts/index.html",
+    "title": "ML & DL Concepts",
+    "section": "",
+    "text": "This section covers fundamental concepts in Machine Learning and Deep Learning. Explore the theoretical foundations, algorithms, and techniques that power modern AI systems.\n\nMachine Learning Algorithms: Understanding classification, regression, and clustering\nDeep Learning Architectures: Exploring neural networks and their variants\nStatistical Foundations: Probability, inference, and hypothesis testing\nModel Evaluation: Metrics, validation strategies, and performance analysis"
+  },
+  {
+    "objectID": "concepts/index.html#welcome-to-ml-dl-concepts",
+    "href": "concepts/index.html#welcome-to-ml-dl-concepts",
+    "title": "ML & DL Concepts",
+    "section": "",
+    "text": "This section covers fundamental concepts in Machine Learning and Deep Learning. Explore the theoretical foundations, algorithms, and techniques that power modern AI systems.\n\nMachine Learning Algorithms: Understanding classification, regression, and clustering\nDeep Learning Architectures: Exploring neural networks and their variants\nStatistical Foundations: Probability, inference, and hypothesis testing\nModel Evaluation: Metrics, validation strategies, and performance analysis"
+  },
+  {
+    "objectID": "concepts/index.html#all-concepts",
+    "href": "concepts/index.html#all-concepts",
+    "title": "ML & DL Concepts",
+    "section": "All Concepts",
+    "text": "All Concepts"
+  },
+  {
+    "objectID": "rag/index.html",
+    "href": "rag/index.html",
+    "title": "Retrieval-Augmented Generation (RAG)",
+    "section": "",
+    "text": "This section explores Retrieval-Augmented Generation (RAG), a technique that enhances language models by retrieving relevant information from external knowledge sources before generating responses.\n\nVector Databases: Understanding embeddings and vector search\nRetrieval Strategies: Methods for finding the most relevant information\nContext Integration: Techniques for incorporating retrieved context into generation\nRAG Architectures: Different approaches to implementing RAG systems"
+  },
+  {
+    "objectID": "rag/index.html#welcome-to-retrieval-augmented-generation",
+    "href": "rag/index.html#welcome-to-retrieval-augmented-generation",
+    "title": "Retrieval-Augmented Generation (RAG)",
+    "section": "",
+    "text": "This section explores Retrieval-Augmented Generation (RAG), a technique that enhances language models by retrieving relevant information from external knowledge sources before generating responses.\n\nVector Databases: Understanding embeddings and vector search\nRetrieval Strategies: Methods for finding the most relevant information\nContext Integration: Techniques for incorporating retrieved context into generation\nRAG Architectures: Different approaches to implementing RAG systems"
+  },
+  {
+    "objectID": "rag/index.html#all-rag-posts",
+    "href": "rag/index.html#all-rag-posts",
+    "title": "Retrieval-Augmented Generation (RAG)",
+    "section": "All RAG Posts",
+    "text": "All RAG Posts"
+  },
+  {
+    "objectID": "finetuning/index.html",
+    "href": "finetuning/index.html",
+    "title": "Finetuning",
+    "section": "",
+    "text": "This section covers various techniques for adapting pre-trained language models to specific tasks and domains. Learn about different approaches to fine-tuning, from full parameter tuning to more efficient methods.\n\nFull Fine-tuning: Techniques for updating all model parameters\nParameter-Efficient Fine-tuning (PEFT): Methods like LoRA, adapters, and prompt tuning\nInstruction Tuning: Aligning models with human instructions\nDomain Adaptation: Specializing models for specific domains"
+  },
+  {
+    "objectID": "finetuning/index.html#welcome-to-finetuning",
+    "href": "finetuning/index.html#welcome-to-finetuning",
+    "title": "Finetuning",
+    "section": "",
+    "text": "This section covers various techniques for adapting pre-trained language models to specific tasks and domains. Learn about different approaches to fine-tuning, from full parameter tuning to more efficient methods.\n\nFull Fine-tuning: Techniques for updating all model parameters\nParameter-Efficient Fine-tuning (PEFT): Methods like LoRA, adapters, and prompt tuning\nInstruction Tuning: Aligning models with human instructions\nDomain Adaptation: Specializing models for specific domains"
+  },
+  {
+    "objectID": "finetuning/index.html#all-finetuning-posts",
+    "href": "finetuning/index.html#all-finetuning-posts",
+    "title": "Finetuning",
+    "section": "All Finetuning Posts",
+    "text": "All Finetuning Posts"
+  },
+  {
+    "objectID": "prompting/index.html",
+    "href": "prompting/index.html",
+    "title": "Prompting and Generation Control",
+    "section": "",
+    "text": "This section focuses on techniques for effective prompt engineering and controlling the generation process of large language models. Learn how to craft prompts that yield better results and methods to guide model outputs.\n\nPrompt Engineering: Strategies for designing effective prompts\nGeneration Parameters: Understanding temperature, top-p, and other parameters\nOutput Control: Methods to guide and constrain model outputs\nChain-of-Thought: Techniques for improving reasoning in LLMs"
+  },
+  {
+    "objectID": "prompting/index.html#welcome-to-prompting-and-generation-control",
+    "href": "prompting/index.html#welcome-to-prompting-and-generation-control",
+    "title": "Prompting and Generation Control",
+    "section": "",
+    "text": "This section focuses on techniques for effective prompt engineering and controlling the generation process of large language models. Learn how to craft prompts that yield better results and methods to guide model outputs.\n\nPrompt Engineering: Strategies for designing effective prompts\nGeneration Parameters: Understanding temperature, top-p, and other parameters\nOutput Control: Methods to guide and constrain model outputs\nChain-of-Thought: Techniques for improving reasoning in LLMs"
+  },
+  {
+    "objectID": "prompting/index.html#all-prompting-posts",
+    "href": "prompting/index.html#all-prompting-posts",
+    "title": "Prompting and Generation Control",
+    "section": "All Prompting Posts",
+    "text": "All Prompting Posts"
+  },
+  {
+    "objectID": "llm/index.html",
+    "href": "llm/index.html",
+    "title": "Large Language Models (LLM)",
+    "section": "",
+    "text": "This section is dedicated to Large Language Models (LLMs), their applications, fine-tuning techniques, and more. Browse through the posts below to learn about the latest advancements in LLM technology.\n\nFine-tuning Techniques: Learn how to adapt pre-trained models for specific tasks\nPrompt Engineering: Discover strategies for effective prompt design\nApplications: Explore real-world applications of LLMs\nArchitecture: Understand the inner workings of transformer-based models"
+  },
+  {
+    "objectID": "llm/index.html#welcome-to-the-llm-section",
+    "href": "llm/index.html#welcome-to-the-llm-section",
+    "title": "Large Language Models (LLM)",
+    "section": "",
+    "text": "This section is dedicated to Large Language Models (LLMs), their applications, fine-tuning techniques, and more. Browse through the posts below to learn about the latest advancements in LLM technology.\n\nFine-tuning Techniques: Learn how to adapt pre-trained models for specific tasks\nPrompt Engineering: Discover strategies for effective prompt design\nApplications: Explore real-world applications of LLMs\nArchitecture: Understand the inner workings of transformer-based models"
+  },
+  {
+    "objectID": "llm/index.html#all-llm-posts",
+    "href": "llm/index.html#all-llm-posts",
+    "title": "Large Language Models (LLM)",
+    "section": "All LLM Posts",
+    "text": "All LLM Posts"
+  },
+  {
+    "objectID": "projects/index.html",
+    "href": "projects/index.html",
+    "title": "End-to-End Projects",
+    "section": "",
+    "text": "This section showcases complete AI projects from conception to deployment. Each project demonstrates the integration of various AI techniques to solve real-world problems.\n\nApplication Development: Building complete AI-powered applications\nSystem Architecture: Designing robust AI systems\nDeployment Strategies: Methods for deploying AI models to production\nCase Studies: Real-world examples and lessons learned"
+  },
+  {
+    "objectID": "projects/index.html#welcome-to-end-to-end-projects",
+    "href": "projects/index.html#welcome-to-end-to-end-projects",
+    "title": "End-to-End Projects",
+    "section": "",
+    "text": "This section showcases complete AI projects from conception to deployment. Each project demonstrates the integration of various AI techniques to solve real-world problems.\n\nApplication Development: Building complete AI-powered applications\nSystem Architecture: Designing robust AI systems\nDeployment Strategies: Methods for deploying AI models to production\nCase Studies: Real-world examples and lessons learned"
+  },
+  {
+    "objectID": "projects/index.html#all-projects",
+    "href": "projects/index.html#all-projects",
+    "title": "End-to-End Projects",
+    "section": "All Projects",
+    "text": "All Projects"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "AI4Nerds",
+    "section": "",
+    "text": "This blog is dedicated to sharing insights, tutorials, and explorations in the field of Artificial Intelligence.\n\n\n\n\nExplore techniques for effective prompt engineering and controlling the generation process of large language models.\n\n\n\nNo posts yet. Check back soon!\n\nView all posts →\n\n\n\n\n\n\n\nLearn about different approaches to fine-tuning language models, from full parameter tuning to more efficient methods.\n\n\n\nNo posts yet. Check back soon!\n\nView all posts →\n\n\n\n\n\n\n\n\nDiscover how to enhance language models by retrieving relevant information from external knowledge sources.\n\n\n\nNo posts yet. Check back soon!\n\nView all posts →\n\n\n\n\n\n\n\nExplore complete AI projects from conception to deployment, demonstrating the integration of various AI techniques.\n\n\n\nNo posts yet. Check back soon!\n\nView all posts →\n\n\n\n\n\n\n\n\nExplore fundamental concepts in Machine Learning and Deep Learning, including algorithms, architectures, and evaluation methods.\n\n\n\nNo posts yet. Check back soon!\n\nView all posts →"
+  },
+  {
+    "objectID": "index.html#welcome-to-ai4nerds",
+    "href": "index.html#welcome-to-ai4nerds",
+    "title": "AI4Nerds",
+    "section": "",
+    "text": "This blog is dedicated to sharing insights, tutorials, and explorations in the field of Artificial Intelligence.\n\n\n\n\nExplore techniques for effective prompt engineering and controlling the generation process of large language models.\n\n\n\nNo posts yet. Check back soon!\n\nView all posts →\n\n\n\n\n\n\n\nLearn about different approaches to fine-tuning language models, from full parameter tuning to more efficient methods.\n\n\n\nNo posts yet. Check back soon!\n\nView all posts →\n\n\n\n\n\n\n\n\nDiscover how to enhance language models by retrieving relevant information from external knowledge sources.\n\n\n\nNo posts yet. Check back soon!\n\nView all posts →\n\n\n\n\n\n\n\nExplore complete AI projects from conception to deployment, demonstrating the integration of various AI techniques.\n\n\n\nNo posts yet. Check back soon!\n\nView all posts →\n\n\n\n\n\n\n\n\nExplore fundamental concepts in Machine Learning and Deep Learning, including algorithms, architectures, and evaluation methods.\n\n\n\nNo posts yet. Check back soon!\n\nView all posts →"
+  },
+  {
+    "objectID": "ml/index.html",
+    "href": "ml/index.html",
+    "title": "Machine Learning (ML)",
+    "section": "",
+    "text": "This section focuses on traditional Machine Learning techniques, algorithms, statistical methods, and best practices. Explore the posts below to enhance your understanding of ML concepts and applications.\n\nAlgorithms: Deep dives into classification, regression, and clustering algorithms\nFeature Engineering: Techniques for creating effective features\nModel Evaluation: Methods to assess and improve model performance\nStatistical Foundations: Understanding the math behind machine learning"
+  },
+  {
+    "objectID": "ml/index.html#welcome-to-the-ml-section",
+    "href": "ml/index.html#welcome-to-the-ml-section",
+    "title": "Machine Learning (ML)",
+    "section": "",
+    "text": "This section focuses on traditional Machine Learning techniques, algorithms, statistical methods, and best practices. Explore the posts below to enhance your understanding of ML concepts and applications.\n\nAlgorithms: Deep dives into classification, regression, and clustering algorithms\nFeature Engineering: Techniques for creating effective features\nModel Evaluation: Methods to assess and improve model performance\nStatistical Foundations: Understanding the math behind machine learning"
+  },
+  {
+    "objectID": "ml/index.html#all-ml-posts",
+    "href": "ml/index.html#all-ml-posts",
+    "title": "Machine Learning (ML)",
+    "section": "All ML Posts",
+    "text": "All ML Posts"
+  }
+]
