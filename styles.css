@@ -19,6 +19,8 @@
   --card-border: #e0e0e0;
   --background-color: #f8f9fa;
   --text-color: #333;
+  --navbar-bg: #4682B4	;
+  --navbar-text: #ffffff;
 }
 
 body {
@@ -29,17 +31,22 @@ body {
 /* Navigation */
 .navbar {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  background-color: white !important;
+  background-color: var(--navbar-bg) !important;
 }
 
 .navbar-brand {
   font-size: 1.4rem !important;
   font-weight: 600 !important;
-  color: var(--text-color) !important;
+  color: var(--navbar-text) !important;
 }
 
 .nav-link {
   font-weight: 500;
+  color: var(--navbar-text) !important;
+}
+
+.nav-link:hover {
+  opacity: 0.8;
 }
 
 /* Remove duplicate title */
@@ -161,19 +168,6 @@ body {
 
 .llm-link {
   background-color: var(--llm-color);
-}
-
-/* Welcome note */
-.welcome-note {
-  position: fixed;
-  right: 20px;
-  top: 100px;
-  width: 300px;
-  background-color: white;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  border: 1px solid var(--card-border);
 }
 
 /* Hide code tools */
