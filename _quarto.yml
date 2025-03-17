@@ -8,10 +8,11 @@ website:
   site-url: https://ai4nerds.github.io/blog
   repo-url: https://github.com/ai4nerds/blog
   navbar:
-    background: primary
     search: true
     pinned: true
     right:
+      - text: "About Us"
+        href: about.html
       - icon: github
         href: https://github.com/ai4nerds/blog
 

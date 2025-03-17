@@ -19,3 +19,18 @@ $warning: $projects-color;
 /*-- scss:rules --*/
 
 // Additional custom styles can go here if needed 
+
+// Search button color override
+.navbar .quarto-navbar-tools {
+  .bi-search {
+    color: #000000 !important;
+  }
+  
+  button {
+    color: #000000 !important;
+    
+    &:hover {
+      color: #000000 !important;
+    }
+  }
+} 

@@ -4,17 +4,6 @@ page-layout: full
 title-block-banner: false
 ---
 
-::: {.welcome-note}
-### About Us
-We are a team of four passionate developers exploring the frontiers of open-source AI. Our focus is on Large Language Models (LLMs) and their practical applications. Through this blog, we share our hands-on experiences, insights, and discoveries in:
-
-- LLM Fine-tuning & Optimization
-- Prompt Engineering
-- RAG Systems
-- Open-source AI Tools
-- End-to-end AI Applications
-:::
-
 :::: {.columns}
 
 ::: {.column width="48%"}

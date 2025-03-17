@@ -1,0 +1,16 @@
+---
+title: "About Us"
+page-layout: article
+---
+
+### Welcome to AI4Nerds
+
+We are a team of four passionate developers exploring the frontiers of open-source AI. Our focus is on Large Language Models (LLMs) and their practical applications. Through this blog, we share our hands-on experiences, insights, and discoveries in:
+
+- LLM Fine-tuning & Optimization
+- Prompt Engineering
+- RAG Systems
+- Open-source AI Tools
+- End-to-end AI Applications
+
+Join us on this exciting journey of exploring and building with AI! 
