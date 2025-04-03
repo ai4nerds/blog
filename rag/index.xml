@@ -10,7 +10,7 @@
 <atom:link href="https://ai4nerds.github.io/blog/rag/index.xml" rel="self" type="application/rss+xml"/>
 <description></description>
 <generator>quarto-1.6.42</generator>
-<lastBuildDate>Thu, 03 Apr 2025 16:59:18 GMT</lastBuildDate>
+<lastBuildDate>Thu, 03 Apr 2025 17:29:57 GMT</lastBuildDate>
 <item>
   <title>Retrieval-Augmented Generation (RAG) Concepts</title>
   <link>https://ai4nerds.github.io/blog/rag/Introduction to RAG.html</link>
@@ -192,7 +192,7 @@
 
  ]]></description>
   <guid>https://ai4nerds.github.io/blog/rag/Introduction to RAG.html</guid>
-  <pubDate>Thu, 03 Apr 2025 16:59:18 GMT</pubDate>
+  <pubDate>Thu, 03 Apr 2025 17:29:57 GMT</pubDate>
 </item>
 </channel>
 </rss>
