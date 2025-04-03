@@ -77,9 +77,9 @@ ul.task-list li input[type="checkbox"] {
     }
 
     const options = {
-      valueNames: ['listing-title','listing-author','listing-image','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      valueNames: ['listing-title','listing-author','listing-date','listing-image','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
       
-      searchColumns: ["listing-title","listing-author","listing-image","listing-description"],
+      searchColumns: ["listing-title","listing-author","listing-date","listing-image","listing-description"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -227,6 +227,12 @@ window.Quarto = {
          <option value="listing-title" data-direction="asc">
           Title
         </option>
+         <option value="listing-date-sort" data-direction="asc">
+          Date - Oldest
+        </option>
+         <option value="listing-date-sort" data-direction="desc">
+          Date - Newest
+        </option>
          <option value="listing-author" data-direction="asc">
           Author
         </option>
@@ -238,7 +244,7 @@ window.Quarto = {
     </div>
 </div>
 <div class="list grid quarto-listing-cols-3">
-<div class="g-col-1" data-index="0" data-listing-file-modified-sort="1743701341100" data-listing-reading-time-sort="3" data-listing-word-count-sort="534">
+<div class="g-col-1" data-index="0" data-listing-date-sort="1743638400000" data-listing-file-modified-sort="1743704658795" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="502">
 <a href="../rag/Introduction to RAG.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <div class="listing-item-img-placeholder card-img-top" style="height: 250px;">&nbsp;</div>
@@ -247,11 +253,14 @@ window.Quarto = {
 Retrieval-Augmented Generation (RAG) Concepts
 </h5>
 <div class="card-text listing-description">
-Retrieval-Augmented Generation (RAG) is a framework that enhances Large Language Models (LLMs) by combining them with a retrieval system to access external knowledge during…
+Introduction To RAG
 </div>
-<div class="card-attribution card-text-small start">
+<div class="card-attribution card-text-small justify">
 <div class="listing-author">
-
+Ravindra
+</div>
+<div class="listing-date">
+Apr 3, 2025
 </div>
 </div>
 </div>

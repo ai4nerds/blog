@@ -46,21 +46,14 @@
     "href": "rag/Introduction to RAG.html",
     "title": "Retrieval-Augmented Generation (RAG) Concepts",
     "section": "",
-    "text": "Retrieval-Augmented Generation (RAG) is a framework that enhances Large Language Models (LLMs) by combining them with a retrieval system to access external knowledge during generation."
+    "text": "Retrieval-Augmented Generation (RAG) is a framework that enhances Large Language Models (LLMs) by combining them with a retrieval system to access external knowledge during text generation."
   },
   {
     "objectID": "rag/Introduction to RAG.html#what-is-rag",
     "href": "rag/Introduction to RAG.html#what-is-rag",
     "title": "Retrieval-Augmented Generation (RAG) Concepts",
     "section": "",
-    "text": "Retrieval-Augmented Generation (RAG) is a framework that enhances Large Language Models (LLMs) by combining them with a retrieval system to access external knowledge during generation."
-  },
-  {
-    "objectID": "rag/Introduction to RAG.html#what-is-rag-1",
-    "href": "rag/Introduction to RAG.html#what-is-rag-1",
-    "title": "Retrieval-Augmented Generation (RAG) Concepts",
-    "section": "What is RAG?",
-    "text": "What is RAG?\nRetrieval-Augmented Generation (RAG) is a framework that enhances Large Language Models (LLMs) by combining them with a retrieval system to access external knowledge during text generation."
+    "text": "Retrieval-Augmented Generation (RAG) is a framework that enhances Large Language Models (LLMs) by combining them with a retrieval system to access external knowledge during text generation."
   },
   {
     "objectID": "rag/Introduction to RAG.html#core-components",
@@ -158,7 +151,7 @@
     "href": "index.html",
     "title": "AI4Nerds",
     "section": "",
-    "text": "Prompting and Generation Control\nExplore techniques for effective prompt engineering and controlling the generation process of large language models.\n\nComing Soon\n\nNo posts yet. Check back soon!\n\nView all posts →\n\n\n\n\n\n\nRetrieval-Augmented Generation (RAG)\nDiscover how to enhance language models by retrieving relevant information from external knowledge sources.\n\nRecent Posts\n\nIntroduction to RAG\n\nView all posts →\n\n\n\n\n\n\n\nFinetuning\nLearn about different approaches to fine-tuning language models, from full parameter tuning to more efficient methods.\n\nComing Soon\n\nNo posts yet. Check back soon!\n\nView all posts →\n\n\n\n\n\n\nEnd-to-End Projects\nExplore complete AI projects from conception to deployment, demonstrating the integration of various AI techniques.\n\nComing Soon\n\nNo posts yet. Check back soon!\n\nView all posts →\n\n\n\n\n\n\n\nML & DL Concepts\nExplore fundamental concepts in Machine Learning and Deep Learning, including algorithms, architectures, and evaluation methods.\n\nComing Soon\n\nNo posts yet. Check back soon!\n\nView all posts →\n\n\n\n\n\n\nLLM Deep Dives\nExplore in-depth analyses of Large Language Models, their architectures, and innovative applications.\n\nComing Soon\n\nNo posts yet. Check back soon!\n\nView all posts →"
+    "text": "Prompting and Generation Control\nExplore techniques for effective prompt engineering and controlling the generation process of large language models.\n\nComing Soon\n\nNo posts yet. Check back soon!\n\nView all posts →\n\n\n\n\n\n\nRetrieval-Augmented Generation (RAG)\nDiscover how to enhance language models by retrieving relevant information from external knowledge sources.\n\nRecent Posts\n\nRetrieval-Augmented Generation (RAG) Concepts\n\nView all posts →\n\n\n\n\n\n\n\nFinetuning\nLearn about different approaches to fine-tuning language models, from full parameter tuning to more efficient methods.\n\nComing Soon\n\nNo posts yet. Check back soon!\n\nView all posts →\n\n\n\n\n\n\nEnd-to-End Projects\nExplore complete AI projects from conception to deployment, demonstrating the integration of various AI techniques.\n\nComing Soon\n\nNo posts yet. Check back soon!\n\nView all posts →\n\n\n\n\n\n\n\nML & DL Concepts\nExplore fundamental concepts in Machine Learning and Deep Learning, including algorithms, architectures, and evaluation methods.\n\nComing Soon\n\nNo posts yet. Check back soon!\n\nView all posts →\n\n\n\n\n\n\nLLM Deep Dives\nExplore in-depth analyses of Large Language Models, their architectures, and innovative applications.\n\nComing Soon\n\nNo posts yet. Check back soon!\n\nView all posts →"
   },
   {
     "objectID": "llm/index.html",

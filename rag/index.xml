@@ -10,9 +10,10 @@
 <atom:link href="https://ai4nerds.github.io/blog/rag/index.xml" rel="self" type="application/rss+xml"/>
 <description></description>
 <generator>quarto-1.6.42</generator>
-<lastBuildDate>Thu, 03 Apr 2025 17:29:57 GMT</lastBuildDate>
+<lastBuildDate>Thu, 03 Apr 2025 00:00:00 GMT</lastBuildDate>
 <item>
   <title>Retrieval-Augmented Generation (RAG) Concepts</title>
+  <dc:creator>Ravindra </dc:creator>
   <link>https://ai4nerds.github.io/blog/rag/Introduction to RAG.html</link>
   <description><![CDATA[ 
 
@@ -21,12 +22,6 @@
 
 <section id="what-is-rag" class="level2">
 <h2 class="anchored" data-anchor-id="what-is-rag">What is RAG?</h2>
-<p>Retrieval-Augmented Generation (RAG) is a framework that enhances Large Language Models (LLMs) by combining them with a retrieval system to access external knowledge during generation.</p>
-</section>
-<section id="retrieval-augmented-generation-rag-concepts" class="level1">
-<h1>Retrieval-Augmented Generation (RAG) Concepts</h1>
-<section id="what-is-rag-1" class="level2">
-<h2 class="anchored" data-anchor-id="what-is-rag-1">What is RAG?</h2>
 <p>Retrieval-Augmented Generation (RAG) is a framework that enhances Large Language Models (LLMs) by combining them with a retrieval system to access external knowledge during text generation.</p>
 </section>
 <section id="core-components" class="level2">
@@ -188,11 +183,10 @@
 
 
 </section>
-</section>
 
  ]]></description>
   <guid>https://ai4nerds.github.io/blog/rag/Introduction to RAG.html</guid>
-  <pubDate>Thu, 03 Apr 2025 17:29:57 GMT</pubDate>
+  <pubDate>Thu, 03 Apr 2025 00:00:00 GMT</pubDate>
 </item>
 </channel>
 </rss>
