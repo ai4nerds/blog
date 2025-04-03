@@ -42,25 +42,116 @@
     "text": "All ML Posts"
   },
   {
-    "objectID": "rag/index.html",
-    "href": "rag/index.html",
-    "title": "Retrieval-Augmented Generation (RAG)",
+    "objectID": "rag/rag_concepts.html",
+    "href": "rag/rag_concepts.html",
+    "title": "Retrieval-Augmented Generation (RAG) Concepts",
     "section": "",
-    "text": "This section explores Retrieval-Augmented Generation (RAG), a technique that enhances language models by retrieving relevant information from external knowledge sources before generating responses.\n\nVector Databases: Understanding embeddings and vector search\nRetrieval Strategies: Methods for finding the most relevant information\nContext Integration: Techniques for incorporating retrieved context into generation\nRAG Architectures: Different approaches to implementing RAG systems"
+    "text": "Retrieval-Augmented Generation (RAG) is a framework that enhances Large Language Models (LLMs) by combining them with a retrieval system to access external knowledge during text generation."
   },
   {
-    "objectID": "rag/index.html#welcome-to-retrieval-augmented-generation",
-    "href": "rag/index.html#welcome-to-retrieval-augmented-generation",
-    "title": "Retrieval-Augmented Generation (RAG)",
+    "objectID": "rag/rag_concepts.html#what-is-rag",
+    "href": "rag/rag_concepts.html#what-is-rag",
+    "title": "Retrieval-Augmented Generation (RAG) Concepts",
     "section": "",
-    "text": "This section explores Retrieval-Augmented Generation (RAG), a technique that enhances language models by retrieving relevant information from external knowledge sources before generating responses.\n\nVector Databases: Understanding embeddings and vector search\nRetrieval Strategies: Methods for finding the most relevant information\nContext Integration: Techniques for incorporating retrieved context into generation\nRAG Architectures: Different approaches to implementing RAG systems"
+    "text": "Retrieval-Augmented Generation (RAG) is a framework that enhances Large Language Models (LLMs) by combining them with a retrieval system to access external knowledge during text generation."
   },
   {
-    "objectID": "rag/index.html#all-rag-posts",
-    "href": "rag/index.html#all-rag-posts",
-    "title": "Retrieval-Augmented Generation (RAG)",
-    "section": "All RAG Posts",
-    "text": "All RAG Posts"
+    "objectID": "rag/rag_concepts.html#core-components",
+    "href": "rag/rag_concepts.html#core-components",
+    "title": "Retrieval-Augmented Generation (RAG) Concepts",
+    "section": "Core Components",
+    "text": "Core Components\n\n1. Retriever\n\nVector Database: Stores embeddings of documents/knowledge\nEmbedding Model: Converts text into vector representations\nSimilarity Search: Finds relevant documents based on query similarity\n\n\n\n2. Generator\n\nLanguage Model: Processes retrieved information and generates responses\nContext Window: Manages how much retrieved content can be used\nPrompt Engineering: Structures how retrieved content is presented to the LLM"
+  },
+  {
+    "objectID": "rag/rag_concepts.html#how-rag-works",
+    "href": "rag/rag_concepts.html#how-rag-works",
+    "title": "Retrieval-Augmented Generation (RAG) Concepts",
+    "section": "How RAG Works",
+    "text": "How RAG Works\n\nDocument Processing\n\nDocuments are split into chunks\nEach chunk is converted into embeddings\nEmbeddings are stored in a vector database\n\nQuery Processing\n\nUser query is received\nQuery is converted to embedding\nSimilar documents are retrieved\n\nGeneration\n\nRetrieved documents are combined with the query\nLLM generates response using both query and retrieved context"
+  },
+  {
+    "objectID": "rag/rag_concepts.html#benefits-of-rag",
+    "href": "rag/rag_concepts.html#benefits-of-rag",
+    "title": "Retrieval-Augmented Generation (RAG) Concepts",
+    "section": "Benefits of RAG",
+    "text": "Benefits of RAG\n\nUp-to-date Information: Can access current information not in LLM training\nVerifiable Outputs: Responses can be traced to source documents\nReduced Hallucination: LLM is grounded in retrieved facts\nDomain Adaptation: Easy to adapt to specific domains"
+  },
+  {
+    "objectID": "rag/rag_concepts.html#common-challenges",
+    "href": "rag/rag_concepts.html#common-challenges",
+    "title": "Retrieval-Augmented Generation (RAG) Concepts",
+    "section": "Common Challenges",
+    "text": "Common Challenges\n\nRetrieval Quality\n\nEnsuring relevant document retrieval\nHandling semantic similarity effectively\nManaging context length\n\nIntegration Complexity\n\nBalancing retrieval and generation\nOptimizing response time\nManaging system resources\n\nData Management\n\nKeeping information current\nHandling document updates\nMaintaining data quality"
+  },
+  {
+    "objectID": "rag/rag_concepts.html#best-practices",
+    "href": "rag/rag_concepts.html#best-practices",
+    "title": "Retrieval-Augmented Generation (RAG) Concepts",
+    "section": "Best Practices",
+    "text": "Best Practices\n\nDocument Processing\n\nUse appropriate chunk sizes\nMaintain document context\nImplement effective cleaning strategies\n\nRetrieval Strategy\n\nOptimize number of retrieved documents\nImplement re-ranking when needed\nUse hybrid search approaches\n\nSystem Design\n\nImplement caching mechanisms\nMonitor system performance\nRegular evaluation and tuning"
+  },
+  {
+    "objectID": "rag/rag_concepts.html#use-cases",
+    "href": "rag/rag_concepts.html#use-cases",
+    "title": "Retrieval-Augmented Generation (RAG) Concepts",
+    "section": "Use Cases",
+    "text": "Use Cases\n\nQuestion Answering\n\nCustomer support\nTechnical documentation\nResearch assistance\n\nContent Generation\n\nReport writing\nDocumentation\nContent summarization\n\nKnowledge Management\n\nCorporate knowledge bases\nEducational systems\nResearch tools"
+  },
+  {
+    "objectID": "rag/rag_concepts.html#evaluation-metrics",
+    "href": "rag/rag_concepts.html#evaluation-metrics",
+    "title": "Retrieval-Augmented Generation (RAG) Concepts",
+    "section": "Evaluation Metrics",
+    "text": "Evaluation Metrics\n\nRetrieval Metrics\n\nPrecision\nRecall\nMean Reciprocal Rank (MRR)\n\nGeneration Metrics\n\nROUGE scores\nBLEU scores\nHuman evaluation"
+  },
+  {
+    "objectID": "rag/rag_concepts.html#future-directions",
+    "href": "rag/rag_concepts.html#future-directions",
+    "title": "Retrieval-Augmented Generation (RAG) Concepts",
+    "section": "Future Directions",
+    "text": "Future Directions\n\nAdvanced Architectures\n\nMulti-step reasoning\nHybrid retrieval methods\nSelf-improving systems\n\nOptimization Techniques\n\nBetter embedding models\nImproved chunking strategies\nMore efficient retrieval"
+  },
+  {
+    "objectID": "rag/rag_concepts.html#conclusion",
+    "href": "rag/rag_concepts.html#conclusion",
+    "title": "Retrieval-Augmented Generation (RAG) Concepts",
+    "section": "Conclusion",
+    "text": "Conclusion\nRAG represents a significant advancement in AI systems, combining the power of LLMs with the ability to access and utilize external knowledge. As the technology continues to evolve, it promises to deliver more accurate, reliable, and useful AI applications."
+  },
+  {
+    "objectID": "concepts/index.html",
+    "href": "concepts/index.html",
+    "title": "ML & DL Concepts",
+    "section": "",
+    "text": "This section covers fundamental concepts in Machine Learning and Deep Learning. Explore the theoretical foundations, algorithms, and techniques that power modern AI systems.\n\nMachine Learning Algorithms: Understanding classification, regression, and clustering\nDeep Learning Architectures: Exploring neural networks and their variants\nStatistical Foundations: Probability, inference, and hypothesis testing\nModel Evaluation: Metrics, validation strategies, and performance analysis"
+  },
+  {
+    "objectID": "concepts/index.html#welcome-to-ml-dl-concepts",
+    "href": "concepts/index.html#welcome-to-ml-dl-concepts",
+    "title": "ML & DL Concepts",
+    "section": "",
+    "text": "This section covers fundamental concepts in Machine Learning and Deep Learning. Explore the theoretical foundations, algorithms, and techniques that power modern AI systems.\n\nMachine Learning Algorithms: Understanding classification, regression, and clustering\nDeep Learning Architectures: Exploring neural networks and their variants\nStatistical Foundations: Probability, inference, and hypothesis testing\nModel Evaluation: Metrics, validation strategies, and performance analysis"
+  },
+  {
+    "objectID": "concepts/index.html#all-concepts",
+    "href": "concepts/index.html#all-concepts",
+    "title": "ML & DL Concepts",
+    "section": "All Concepts",
+    "text": "All Concepts"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About Us",
+    "section": "",
+    "text": "Welcome to AI4Nerds\nWe are a team of four passionate developers exploring the frontiers of open-source AI. Our focus is on Large Language Models (LLMs) and their practical applications. Through this blog, we share our hands-on experiences, insights, and discoveries in:\n\nLLM Fine-tuning & Optimization\nPrompt Engineering\nRAG Systems\nOpen-source AI Tools\nEnd-to-end AI Applications\n\nJoin us on this exciting journey of exploring and building with AI!"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "AI4Nerds",
+    "section": "",
+    "text": "Prompting and Generation Control\nExplore techniques for effective prompt engineering and controlling the generation process of large language models.\n\nComing Soon\n\nNo posts yet. Check back soon!\n\nView all posts →\n\n\n\n\n\n\nRetrieval-Augmented Generation (RAG)\nDiscover how to enhance language models by retrieving relevant information from external knowledge sources.\n\nRecent Posts\n\nrag concepts\n\nView all posts →\n\n\n\n\n\n\n\nFinetuning\nLearn about different approaches to fine-tuning language models, from full parameter tuning to more efficient methods.\n\nComing Soon\n\nNo posts yet. Check back soon!\n\nView all posts →\n\n\n\n\n\n\nEnd-to-End Projects\nExplore complete AI projects from conception to deployment, demonstrating the integration of various AI techniques.\n\nComing Soon\n\nNo posts yet. Check back soon!\n\nView all posts →\n\n\n\n\n\n\n\nML & DL Concepts\nExplore fundamental concepts in Machine Learning and Deep Learning, including algorithms, architectures, and evaluation methods.\n\nComing Soon\n\nNo posts yet. Check back soon!\n\nView all posts →\n\n\n\n\n\n\nLLM Deep Dives\nExplore in-depth analyses of Large Language Models, their architectures, and innovative applications.\n\nComing Soon\n\nNo posts yet. Check back soon!\n\nView all posts →"
   },
   {
     "objectID": "llm/index.html",
@@ -84,39 +175,25 @@
     "text": "All LLM Posts"
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "AI4Nerds",
+    "objectID": "rag/index.html",
+    "href": "rag/index.html",
+    "title": "Retrieval-Augmented Generation (RAG)",
     "section": "",
-    "text": "Prompting and Generation Control\nExplore techniques for effective prompt engineering and controlling the generation process of large language models.\n\nComing Soon\n\nNo posts yet. Check back soon!\n\nView all posts →\n\n\n\n\n\n\nRetrieval-Augmented Generation (RAG)\nDiscover how to enhance language models by retrieving relevant information from external knowledge sources.\n\nComing Soon\n\nNo posts yet. Check back soon!\n\nView all posts →\n\n\n\n\n\n\n\nFinetuning\nLearn about different approaches to fine-tuning language models, from full parameter tuning to more efficient methods.\n\nComing Soon\n\nNo posts yet. Check back soon!\n\nView all posts →\n\n\n\n\n\n\nEnd-to-End Projects\nExplore complete AI projects from conception to deployment, demonstrating the integration of various AI techniques.\n\nComing Soon\n\nNo posts yet. Check back soon!\n\nView all posts →\n\n\n\n\n\n\n\nML & DL Concepts\nExplore fundamental concepts in Machine Learning and Deep Learning, including algorithms, architectures, and evaluation methods.\n\nComing Soon\n\nNo posts yet. Check back soon!\n\nView all posts →\n\n\n\n\n\n\nLLM Deep Dives\nExplore in-depth analyses of Large Language Models, their architectures, and innovative applications.\n\nComing Soon\n\nNo posts yet. Check back soon!\n\nView all posts →"
+    "text": "This section explores Retrieval-Augmented Generation (RAG), a technique that enhances language models by retrieving relevant information from external knowledge sources before generating responses.\n\nVector Databases: Understanding embeddings and vector search\nRetrieval Strategies: Methods for finding the most relevant information\nContext Integration: Techniques for incorporating retrieved context into generation\nRAG Architectures: Different approaches to implementing RAG systems"
   },
   {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About Us",
+    "objectID": "rag/index.html#welcome-to-retrieval-augmented-generation",
+    "href": "rag/index.html#welcome-to-retrieval-augmented-generation",
+    "title": "Retrieval-Augmented Generation (RAG)",
     "section": "",
-    "text": "Welcome to AI4Nerds\nWe are a team of four passionate developers exploring the frontiers of open-source AI. Our focus is on Large Language Models (LLMs) and their practical applications. Through this blog, we share our hands-on experiences, insights, and discoveries in:\n\nLLM Fine-tuning & Optimization\nPrompt Engineering\nRAG Systems\nOpen-source AI Tools\nEnd-to-end AI Applications\n\nJoin us on this exciting journey of exploring and building with AI!"
+    "text": "This section explores Retrieval-Augmented Generation (RAG), a technique that enhances language models by retrieving relevant information from external knowledge sources before generating responses.\n\nVector Databases: Understanding embeddings and vector search\nRetrieval Strategies: Methods for finding the most relevant information\nContext Integration: Techniques for incorporating retrieved context into generation\nRAG Architectures: Different approaches to implementing RAG systems"
   },
   {
-    "objectID": "concepts/index.html",
-    "href": "concepts/index.html",
-    "title": "ML & DL Concepts",
-    "section": "",
-    "text": "This section covers fundamental concepts in Machine Learning and Deep Learning. Explore the theoretical foundations, algorithms, and techniques that power modern AI systems.\n\nMachine Learning Algorithms: Understanding classification, regression, and clustering\nDeep Learning Architectures: Exploring neural networks and their variants\nStatistical Foundations: Probability, inference, and hypothesis testing\nModel Evaluation: Metrics, validation strategies, and performance analysis"
-  },
-  {
-    "objectID": "concepts/index.html#welcome-to-ml-dl-concepts",
-    "href": "concepts/index.html#welcome-to-ml-dl-concepts",
-    "title": "ML & DL Concepts",
-    "section": "",
-    "text": "This section covers fundamental concepts in Machine Learning and Deep Learning. Explore the theoretical foundations, algorithms, and techniques that power modern AI systems.\n\nMachine Learning Algorithms: Understanding classification, regression, and clustering\nDeep Learning Architectures: Exploring neural networks and their variants\nStatistical Foundations: Probability, inference, and hypothesis testing\nModel Evaluation: Metrics, validation strategies, and performance analysis"
-  },
-  {
-    "objectID": "concepts/index.html#all-concepts",
-    "href": "concepts/index.html#all-concepts",
-    "title": "ML & DL Concepts",
-    "section": "All Concepts",
-    "text": "All Concepts"
+    "objectID": "rag/index.html#all-rag-posts",
+    "href": "rag/index.html#all-rag-posts",
+    "title": "Retrieval-Augmented Generation (RAG)",
+    "section": "All RAG Posts",
+    "text": "All RAG Posts"
   },
   {
     "objectID": "projects/index.html",

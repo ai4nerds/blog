@@ -2,38 +2,42 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://ai4nerds.github.io/blog/prompting/index.html</loc>
-    <lastmod>2025-03-17T13:23:07.820Z</lastmod>
+    <lastmod>2025-04-03T16:37:10.165Z</lastmod>
   </url>
   <url>
     <loc>https://ai4nerds.github.io/blog/ml/index.html</loc>
-    <lastmod>2025-03-17T13:23:07.820Z</lastmod>
+    <lastmod>2025-04-03T16:37:10.165Z</lastmod>
   </url>
   <url>
-    <loc>https://ai4nerds.github.io/blog/rag/index.html</loc>
-    <lastmod>2025-03-17T13:23:07.820Z</lastmod>
-  </url>
-  <url>
-    <loc>https://ai4nerds.github.io/blog/llm/index.html</loc>
-    <lastmod>2025-03-17T13:23:07.820Z</lastmod>
-  </url>
-  <url>
-    <loc>https://ai4nerds.github.io/blog/index.html</loc>
-    <lastmod>2025-03-17T13:23:07.820Z</lastmod>
-  </url>
-  <url>
-    <loc>https://ai4nerds.github.io/blog/about.html</loc>
-    <lastmod>2025-03-17T13:23:07.819Z</lastmod>
+    <loc>https://ai4nerds.github.io/blog/rag/rag_concepts.html</loc>
+    <lastmod>2025-04-03T16:37:10.165Z</lastmod>
   </url>
   <url>
     <loc>https://ai4nerds.github.io/blog/concepts/index.html</loc>
-    <lastmod>2025-03-17T13:23:07.819Z</lastmod>
+    <lastmod>2025-04-03T16:37:10.164Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ai4nerds.github.io/blog/about.html</loc>
+    <lastmod>2025-04-03T16:37:10.164Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ai4nerds.github.io/blog/index.html</loc>
+    <lastmod>2025-04-03T16:37:10.165Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ai4nerds.github.io/blog/llm/index.html</loc>
+    <lastmod>2025-04-03T16:37:10.165Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ai4nerds.github.io/blog/rag/index.html</loc>
+    <lastmod>2025-04-03T16:37:10.165Z</lastmod>
   </url>
   <url>
     <loc>https://ai4nerds.github.io/blog/projects/index.html</loc>
-    <lastmod>2025-03-17T13:23:07.820Z</lastmod>
+    <lastmod>2025-04-03T16:37:10.165Z</lastmod>
   </url>
   <url>
     <loc>https://ai4nerds.github.io/blog/finetuning/index.html</loc>
-    <lastmod>2025-03-17T13:23:07.819Z</lastmod>
+    <lastmod>2025-04-03T16:37:10.164Z</lastmod>
   </url>
 </urlset>
