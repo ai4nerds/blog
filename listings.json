@@ -8,18 +8,19 @@
     "items": []
   },
   {
-    "listing": "/concepts/index.html",
-    "items": []
+    "listing": "/rag/index.html",
+    "items": [
+      "/rag/Different types of Chunking.html",
+      "/rag/Introduction to RAG.html"
+    ]
   },
   {
     "listing": "/llm/index.html",
     "items": []
   },
   {
-    "listing": "/rag/index.html",
-    "items": [
-      "/rag/Introduction to RAG.html"
-    ]
+    "listing": "/concepts/index.html",
+    "items": []
   },
   {
     "listing": "/projects/index.html",

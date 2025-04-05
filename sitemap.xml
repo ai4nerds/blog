@@ -2,42 +2,46 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://ai4nerds.github.io/blog/prompting/index.html</loc>
-    <lastmod>2025-04-03T18:24:18.794Z</lastmod>
+    <lastmod>2025-04-05T17:12:30.568Z</lastmod>
   </url>
   <url>
     <loc>https://ai4nerds.github.io/blog/ml/index.html</loc>
-    <lastmod>2025-04-03T18:24:18.794Z</lastmod>
+    <lastmod>2025-04-05T17:12:30.568Z</lastmod>
   </url>
   <url>
     <loc>https://ai4nerds.github.io/blog/rag/Introduction to RAG.html</loc>
-    <lastmod>2025-04-03T18:24:18.795Z</lastmod>
-  </url>
-  <url>
-    <loc>https://ai4nerds.github.io/blog/concepts/index.html</loc>
-    <lastmod>2025-04-03T18:24:18.794Z</lastmod>
-  </url>
-  <url>
-    <loc>https://ai4nerds.github.io/blog/about.html</loc>
-    <lastmod>2025-04-03T18:24:18.794Z</lastmod>
-  </url>
-  <url>
-    <loc>https://ai4nerds.github.io/blog/index.html</loc>
-    <lastmod>2025-04-03T18:24:18.794Z</lastmod>
-  </url>
-  <url>
-    <loc>https://ai4nerds.github.io/blog/llm/index.html</loc>
-    <lastmod>2025-04-03T18:24:18.794Z</lastmod>
+    <lastmod>2025-04-05T17:12:30.569Z</lastmod>
   </url>
   <url>
     <loc>https://ai4nerds.github.io/blog/rag/index.html</loc>
-    <lastmod>2025-04-03T18:24:18.795Z</lastmod>
+    <lastmod>2025-04-05T17:12:30.569Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ai4nerds.github.io/blog/llm/index.html</loc>
+    <lastmod>2025-04-05T17:12:30.568Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ai4nerds.github.io/blog/index.html</loc>
+    <lastmod>2025-04-05T17:12:30.568Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ai4nerds.github.io/blog/about.html</loc>
+    <lastmod>2025-04-05T17:12:30.567Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ai4nerds.github.io/blog/concepts/index.html</loc>
+    <lastmod>2025-04-05T17:12:30.568Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ai4nerds.github.io/blog/rag/Different types of Chunking.html</loc>
+    <lastmod>2025-04-05T17:12:30.568Z</lastmod>
   </url>
   <url>
     <loc>https://ai4nerds.github.io/blog/projects/index.html</loc>
-    <lastmod>2025-04-03T18:24:18.794Z</lastmod>
+    <lastmod>2025-04-05T17:12:30.568Z</lastmod>
   </url>
   <url>
     <loc>https://ai4nerds.github.io/blog/finetuning/index.html</loc>
-    <lastmod>2025-04-03T18:24:18.794Z</lastmod>
+    <lastmod>2025-04-05T17:12:30.568Z</lastmod>
   </url>
 </urlset>
