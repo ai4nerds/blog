@@ -10,6 +10,174 @@
 <atom:link href="https://ai4nerds.github.io/blog/llm/index.xml" rel="self" type="application/rss+xml"/>
 <description></description>
 <generator>quarto-1.6.43</generator>
-<lastBuildDate>Sat, 05 Apr 2025 17:31:00 GMT</lastBuildDate>
+<lastBuildDate>Mon, 07 Apr 2025 15:10:55 GMT</lastBuildDate>
+<item>
+  <title>Transformers From Scratch - Theory</title>
+  <link>https://ai4nerds.github.io/blog/llm/Transformers_from_scratch_1.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<section id="rnn-understanding" class="level2">
+<h2 class="anchored" data-anchor-id="rnn-understanding">RNN Understanding</h2>
+<p>Recurrent Neural Network (RNN) is a type of neural network designed to handle sequential data. Unlike traditional feedforward neural networks, RNNs have connections that form cycles, allowing information to be passed from one step of the sequence to the next. This structure enables RNNs to maintain a memory of previous inputs, making them suitable for tasks where context over time is important (like time-series forecasting, language modeling, etc.).</p>
+<div data-align="center">
+<p><img src="https://ai4nerds.github.io/blog/llm/images/Tranformers_from_scratch/RNN_Image.webp" alt="RNN Architecture"></p>
+</div>
+<section id="basic-mechanism" class="level3">
+<h3 class="anchored" data-anchor-id="basic-mechanism">Basic Mechanism:</h3>
+<ol type="1">
+<li><strong>Inputs</strong>: At each time step ( t ), an RNN receives an input vector $ (x_t) $.</li>
+<li><strong>Hidden State</strong>: The hidden state $ (h_t) $ is updated at each time step based on the current input $ (x_t) $ and the previous hidden state $ (h_{t-1}) $.</li>
+<li><strong>Output</strong>: The RNN generates an output at each time step, or a final output after processing the entire sequence.</li>
+</ol>
+<section id="mathematical-formulation" class="level4">
+<h4 class="anchored" data-anchor-id="mathematical-formulation">Mathematical Formulation:</h4>
+<ul>
+<li><p><strong>Hidden State</strong>:<br>
+<img src="https://latex.codecogs.com/png.latex?%20h_t%20=%20%5Ctext%7Bactivation%7D(W_h%20%5Ccdot%20h_%7Bt-1%7D%20+%20W_x%20%5Ccdot%20x_t)%20"></p></li>
+<li><p><strong>Output</strong>:<br>
+<img src="https://latex.codecogs.com/png.latex?%20y_t%20=%20W_y%20%5Ccdot%20h_t%20"></p></li>
+</ul>
+</section>
+</section>
+<section id="inputs-and-outputs" class="level3">
+<h3 class="anchored" data-anchor-id="inputs-and-outputs">Inputs and Outputs</h3>
+<ul>
+<li><p><strong>Inputs</strong>: RNNs take in a sequence of data. The input at each time step $ (x_t) $ can be a vector, representing things like a word in a sentence, a stock price in a time series, or a feature in a sequence of data.</p></li>
+<li><p><strong>Outputs</strong>:</p>
+<ul>
+<li>For <strong>sequence-to-sequence tasks</strong> (e.g., machine translation), RNNs produce a sequence of outputs.</li>
+<li>For <strong>many-to-one tasks</strong> (e.g., sentiment analysis), RNNs output a single value after processing the entire sequence.</li>
+</ul></li>
+</ul>
+</section>
+<section id="advantages-of-rnns" class="level3">
+<h3 class="anchored" data-anchor-id="advantages-of-rnns">Advantages of RNNs</h3>
+<ol type="1">
+<li><p><strong>Sequence Handling</strong>: RNNs are designed to handle sequential data, making them ideal for tasks like speech recognition, time-series forecasting, and natural language processing.</p></li>
+<li><p><strong>Context Retention</strong>: The hidden state allows RNNs to retain memory of previous inputs, enabling them to learn dependencies over time.</p></li>
+<li><p><strong>Flexible Input/Output Lengths</strong>: RNNs can process sequences of varying lengths, which is useful in many NLP and time-series tasks.</p></li>
+<li><p><strong>Parameter Sharing</strong>: The weights in an RNN are shared across all time steps, making the model more efficient in terms of size compared to fully connected networks.</p></li>
+</ol>
+</section>
+<section id="limitations-of-rnns" class="level3">
+<h3 class="anchored" data-anchor-id="limitations-of-rnns">Limitations of RNNs</h3>
+<ol type="1">
+<li><p><strong>Vanishing Gradient Problem</strong>: During backpropagation, gradients can become very small, making it difficult to learn long-term dependencies. This limits the effectiveness of RNNs on long sequences.</p></li>
+<li><p><strong>Exploding Gradient Problem</strong>: On the other hand, gradients can also grow excessively large, causing unstable training.</p></li>
+<li><p><strong>Difficulty with Long-Term Dependencies</strong>: RNNs struggle to learn and retain information over long sequences due to the vanishing gradient problem.</p></li>
+<li><p><strong>Slow Training</strong>: Training RNNs is computationally expensive and slow, as each time step depends on the previous one, making them hard to parallelize.</p></li>
+<li><p><strong>Limited Parallelism</strong>: Since RNNs process data sequentially, it’s challenging to parallelize computations effectively, which can hinder scalability.</p></li>
+</ol>
+</section>
+</section>
+<section id="attention" class="level2">
+<h2 class="anchored" data-anchor-id="attention">Attention</h2>
+<section id="what-is-attention" class="level3">
+<h3 class="anchored" data-anchor-id="what-is-attention">What is Attention?</h3>
+<p>Attention is a mechanism used in deep learning models, particularly in natural language processing (NLP) and computer vision, that allows the model to focus on specific parts of the input sequence when making predictions. Instead of processing the entire input equally, the attention mechanism helps the model determine which parts of the input are most important at each step.</p>
+<p>The idea behind attention is inspired by how humans process information: when we read a sentence or observe an image, we don’t give equal attention to every word or pixel. Instead, we focus on specific parts that are most relevant for understanding or making decisions. Attention in neural networks mimics this behavior by assigning different weights (or importance) to different elements in the input, based on the task at hand.</p>
+</section>
+<section id="need-for-attention" class="level3">
+<h3 class="anchored" data-anchor-id="need-for-attention">Need for Attention</h3>
+<ol type="1">
+<li><p><strong>Capturing Long-Term Dependencies</strong>:<br>
+Attention helps overcome the limitations of traditional RNNs and LSTMs by allowing models to focus on relevant parts of the input, even from distant positions in the sequence. This enables better learning of long-term dependencies in tasks like machine translation or text generation.</p></li>
+<li><p><strong>Improved Performance in Complex Tasks</strong>:<br>
+Attention improves model performance by enabling the focus on important parts of the input sequence, which is particularly useful for tasks such as machine translation, text summarization, and image captioning.</p></li>
+<li><p><strong>Parallelization</strong>:<br>
+Attention mechanisms, especially in architectures like Transformers, enable parallel processing of input sequences. This significantly speeds up training and inference compared to sequential models like RNNs, leading to more scalable solutions.</p></li>
+<li><p><strong>Interpretability</strong>:<br>
+Attention mechanisms provide insight into how the model makes predictions by highlighting the parts of the input it focuses on, which improves the interpretability of decisions, especially in complex tasks like machine translation.</p></li>
+<li><p><strong>Handling Variable-Length Sequences</strong>:<br>
+Attention can efficiently handle input sequences of varying lengths by dynamically weighing the importance of different parts of the sequence, making it ideal for tasks with unpredictable input sizes, such as NLP.</p></li>
+<li><p><strong>Flexibility Across Modalities</strong>:<br>
+Attention is versatile and can be applied to different data modalities, such as text, images, and videos. In tasks like image captioning, attention helps focus on specific objects or regions in the image, improving the quality of generated descriptions.</p></li>
+</ol>
+</section>
+</section>
+<section id="transformer-architecture" class="level2">
+<h2 class="anchored" data-anchor-id="transformer-architecture">Transformer Architecture</h2>
+<section id="overview" class="level3">
+<h3 class="anchored" data-anchor-id="overview">Overview</h3>
+<p>This is the basic transformer architecture</p>
+<div data-align="center">
+<p><img src="https://ai4nerds.github.io/blog/llm/images/Tranformers_from_scratch/Transformers_Architecture.webp" alt="Transformers Architecture"></p>
+</div>
+<p>It contains 2 macro-blocks:</p>
+<ul>
+<li>Encoder</li>
+<li>Decoder</li>
+<li>and a linear layer</li>
+</ul>
+<p>Now we will focus each and every part of this architecture in detail to getter better understanding of this architecture</p>
+</section>
+<section id="encoder" class="level3">
+<h3 class="anchored" data-anchor-id="encoder">Encoder</h3>
+<div data-align="center">
+<p><img src="https://ai4nerds.github.io/blog/llm/images/Tranformers_from_scratch/Encoder.webp" alt="Encoder Architecture"></p>
+</div>
+<p>These below are the different components of encoder * Input Embedding * Positional Encoding * Multi Head Attention * Layer Normalization * Feed Forward &amp; Add and Norm</p>
+<section id="input-embeddings" class="level4">
+<h4 class="anchored" data-anchor-id="input-embeddings">Input Embeddings</h4>
+<div data-align="center">
+<p><img src="https://ai4nerds.github.io/blog/llm/images/Tranformers_from_scratch/Input_Embedding.webp" alt="Input Embedding"></p>
+</div>
+<p>Input embeddings are a way to convert raw data (like words, sentences, or other types of input) into numerical representations that machine learning models can understand. They map each item in the input (e.g., a word) to a vector of numbers, capturing semantic meaning or relationships based on patterns learned from large datasets. For example, in natural language processing (NLP), words with similar meanings have similar embeddings, allowing the model to recognize context and relationships between them.</p>
+<div data-align="center">
+<p><img src="https://ai4nerds.github.io/blog/llm/images/Tranformers_from_scratch/Input_Embedding_numbers.webp" alt="Input Embedding in real"></p>
+</div>
+<ol type="1">
+<li>Tokenization: The first step in processing the sentence is tokenization. This involves breaking down the sentence into smaller pieces called tokens (which could be words, subwords, or characters, depending on the tokenizer). In this case, let’s assume that the tokenizer assigns unique integer IDs to each word.</li>
+</ol>
+<ul>
+<li><p>Example of tokenization:</p>
+<p>“Your” → Token ID 105 “cat” → Token ID 6587 “is” → Token ID 5475 “a” → Token ID 3578 “lovely” → Token ID 65 “cat” → Token ID 6587 (again)</p>
+<p>So, the sentence “Your cat is a lovely cat” might be tokenized into the following sequence of token IDs: [105, 6587, 5475, 342, 1234, 6587]</p></li>
+</ul>
+<ol start="2" type="1">
+<li>Embedding Layer: After tokenization, each token ID is mapped to a vector of real numbers in the embedding space. These vectors are high-dimensional representations that capture semantic properties of the tokens. In modern models like GPT, BERT, or similar, each token is represented as a vector with hundreds or thousands of dimensions.</li>
+</ol>
+<p>For example, let’s assume the embedding space is 512 dimensions in the above example. Each token ID from the sequence will be transformed into a 512-dimensional vector.</p>
+</section>
+<section id="positional-encoding" class="level4">
+<h4 class="anchored" data-anchor-id="positional-encoding">Positional Encoding:</h4>
+<p>Positional encoding is a technique used in Transformer models to inject information about the order of tokens in a sequence. Unlike traditional models (like RNNs), Transformers process all tokens in parallel, which means they don’t inherently understand the order of words in a sentence.</p>
+<p>To address this, positional encodings are added to the token embeddings to provide the model with information about the relative or absolute positions of words in the sequence. These encodings are vectors that are added to the word embeddings, and they typically use sinusoidal functions or learned embeddings.</p>
+<p>Need in Transformer Architecture:</p>
+<ul>
+<li><p>Order Awareness: Since Transformers process tokens simultaneously, they need a way to differentiate between, say, “cat chased dog” and “dog chased cat.” Positional encoding tells the model which token is first, second, etc.</p></li>
+<li><p>Contextual Understanding: By incorporating position information, the model can learn the relationships between tokens that depend on their position in the sentence, which is crucial for tasks like translation, summarization, and question answering.</p></li>
+</ul>
+<div data-align="center">
+<p><img src="https://ai4nerds.github.io/blog/llm/images/Tranformers_from_scratch/positional_encoding.webp" alt="position encoding"></p>
+</div>
+<p>We add a position embedding vector of size 512 to our original embedding. The values in the position encoding vector are calculated only once and reused for every sentence during training and inference.</p>
+<p>The sum of the embedding and position embedding gives us the encoder input. For the same word, the vector embedding is the same but the position embedding is different.</p>
+<p>Encoder input = Embedding + Position Embedding</p>
+<section id="how-are-position-embeddings-calculated" class="level5">
+<h5 class="anchored" data-anchor-id="how-are-position-embeddings-calculated">How are position embeddings calculated?</h5>
+<p align="center">
+<img src="https://ai4nerds.github.io/blog/llm/images/Tranformers_from_scratch/position_embedding.webp" alt="position encoding">
+</p>
+<p>For even positions in the position embedding (count starts from 0), we use the 1st formula, and for odd positions in the position embeddings, we use the 2nd formula. We do this for each of the 512 (d model) values of a position embedding, for each word/token in the sentence.</p>
+<p>So, the position embedding for every position in the sentence is the same, regardless of the sentence. It is the encoder input (sum of embedding and position embedding) that is unique. Therefore, we need to compute the positional encodings only once and then we can reuse them during training &amp; inference.</p>
+</section>
+<section id="why-are-trigonometric-functions-used-here" class="level5">
+<h5 class="anchored" data-anchor-id="why-are-trigonometric-functions-used-here">Why are trigonometric functions used here?</h5>
+<p>Trigonometric functions like sin and cos naturally represent a pattern that the model can recognize as continuous. So, it is easier for the model to see the relative positions of a word when using trigonometric functions.</p>
+
+
+</section>
+</section>
+</section>
+</section>
+
+ ]]></description>
+  <guid>https://ai4nerds.github.io/blog/llm/Transformers_from_scratch_1.html</guid>
+  <pubDate>Mon, 07 Apr 2025 15:10:55 GMT</pubDate>
+</item>
 </channel>
 </rss>
