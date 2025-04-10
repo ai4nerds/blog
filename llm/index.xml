@@ -10,7 +10,7 @@
 <atom:link href="https://ai4nerds.github.io/blog/llm/index.xml" rel="self" type="application/rss+xml"/>
 <description></description>
 <generator>quarto-1.6.43</generator>
-<lastBuildDate>Thu, 10 Apr 2025 16:48:38 GMT</lastBuildDate>
+<lastBuildDate>Thu, 10 Apr 2025 17:04:13 GMT</lastBuildDate>
 <item>
   <title>Transformers From Scratch - Theory</title>
   <link>https://ai4nerds.github.io/blog/llm/Transformers_from_scratch_1.html</link>
@@ -177,7 +177,7 @@ Attention is versatile and can be applied to different data modalities, such as 
 
  ]]></description>
   <guid>https://ai4nerds.github.io/blog/llm/Transformers_from_scratch_1.html</guid>
-  <pubDate>Thu, 10 Apr 2025 16:48:38 GMT</pubDate>
+  <pubDate>Thu, 10 Apr 2025 17:04:13 GMT</pubDate>
 </item>
 </channel>
 </rss>

@@ -45,6 +45,10 @@ body {
   color: var(--navbar-text) !important;
 }
 
+.navbar-title{
+  color:white
+}
+
 .nav-link:hover {
   opacity: 0.8;
 }
