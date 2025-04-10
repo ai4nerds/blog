@@ -291,7 +291,7 @@ Attention is versatile and can be applied to different data modalities, such as 
 </div>
 <p>Input embeddings are a way to convert raw data (like words, sentences, or other types of input) into numerical representations that machine learning models can understand. They map each item in the input (e.g., a word) to a vector of numbers, capturing semantic meaning or relationships based on patterns learned from large datasets. For example, in natural language processing (NLP), words with similar meanings have similar embeddings, allowing the model to recognize context and relationships between them.</p>
 <div data-align="center">
-<p><img src="images/Tranformers_from_scratch/Input_Embedding_numbers.webp" alt="Input Embedding in real"></p>
+<p><img src="images/Tranformers_from_scratch/Input_Embedding_numbers.webp" alt="Input Embedding in real" class="responsive-image" style="max-width: 100%; height: auto;"></p>
 </div>
 <ol type="1">
 <li>Tokenization: The first step in processing the sentence is tokenization. This involves breaking down the sentence into smaller pieces called tokens (which could be words, subwords, or characters, depending on the tokenizer). In this case, let’s assume that the tokenizer assigns unique integer IDs to each word.</li>
@@ -316,7 +316,7 @@ Attention is versatile and can be applied to different data modalities, such as 
 <li><p>Contextual Understanding: By incorporating position information, the model can learn the relationships between tokens that depend on their position in the sentence, which is crucial for tasks like translation, summarization, and question answering.</p></li>
 </ul>
 <div data-align="center">
-<p><img src="images/Tranformers_from_scratch/positional_encoding.webp" alt="position encoding"></p>
+<p><img src="images/Tranformers_from_scratch/positional_encoding.webp" alt="position encoding" class="responsive-image" style="max-width: 100%; height: auto;"></p>
 </div>
 <p>We add a position embedding vector of size 512 to our original embedding. The values in the position encoding vector are calculated only once and reused for every sentence during training and inference.</p>
 <p>The sum of the embedding and position embedding gives us the encoder input. For the same word, the vector embedding is the same but the position embedding is different.</p>
@@ -324,7 +324,7 @@ Attention is versatile and can be applied to different data modalities, such as 
 <section id="how-are-position-embeddings-calculated" class="level5">
 <h5 class="anchored" data-anchor-id="how-are-position-embeddings-calculated">How are position embeddings calculated?</h5>
 <p align="center">
-<img src="images/Tranformers_from_scratch/position_embedding.webp" alt="position encoding">
+<img src="images/Tranformers_from_scratch/position_embedding.webp" alt="position encoding" class="responsive-image" style="max-width: 100%; height: auto;">
 </p>
 <p>For even positions in the position embedding (count starts from 0), we use the 1st formula, and for odd positions in the position embeddings, we use the 2nd formula. We do this for each of the 512 (d model) values of a position embedding, for each word/token in the sentence.</p>
 <p>So, the position embedding for every position in the sentence is the same, regardless of the sentence. It is the encoder input (sum of embedding and position embedding) that is unique. Therefore, we need to compute the positional encodings only once and then we can reuse them during training &amp; inference.</p>
