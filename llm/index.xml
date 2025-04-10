@@ -10,7 +10,7 @@
 <atom:link href="https://ai4nerds.github.io/blog/llm/index.xml" rel="self" type="application/rss+xml"/>
 <description></description>
 <generator>quarto-1.6.43</generator>
-<lastBuildDate>Thu, 10 Apr 2025 14:29:25 GMT</lastBuildDate>
+<lastBuildDate>Thu, 10 Apr 2025 14:40:29 GMT</lastBuildDate>
 <item>
   <title>Transformers From Scratch - Theory</title>
   <link>https://ai4nerds.github.io/blog/llm/Transformers_from_scratch_1.html</link>
@@ -23,7 +23,7 @@
 <h2 class="anchored" data-anchor-id="rnn-understanding">RNN Understanding</h2>
 <p>Recurrent Neural Network (RNN) is a type of neural network designed to handle sequential data. Unlike traditional feedforward neural networks, RNNs have connections that form cycles, allowing information to be passed from one step of the sequence to the next. This structure enables RNNs to maintain a memory of previous inputs, making them suitable for tasks where context over time is important (like time-series forecasting, language modeling, etc.).</p>
 <div data-align="center">
-<p><img src="https://ai4nerds.github.io/blog/llm/images/Tranformers_from_scratch/RNN_Image.webp" alt="RNN Architecture" class="responsive-image"></p>
+<p><img src="https://ai4nerds.github.io/blog/llm/images/Tranformers_from_scratch/RNN_Image.webp" alt="RNN Architecture" class="responsive-image" style="max-width: 100%; height: auto;"></p>
 </div>
 <section id="basic-mechanism" class="level3">
 <h3 class="anchored" data-anchor-id="basic-mechanism">Basic Mechanism:</h3>
@@ -177,7 +177,7 @@ Attention is versatile and can be applied to different data modalities, such as 
 
  ]]></description>
   <guid>https://ai4nerds.github.io/blog/llm/Transformers_from_scratch_1.html</guid>
-  <pubDate>Thu, 10 Apr 2025 14:29:25 GMT</pubDate>
+  <pubDate>Thu, 10 Apr 2025 14:40:29 GMT</pubDate>
 </item>
 </channel>
 </rss>
