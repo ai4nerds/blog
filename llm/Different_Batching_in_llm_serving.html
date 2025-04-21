@@ -1,20 +1,157 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<rss  xmlns:atom="http://www.w3.org/2005/Atom" 
-      xmlns:media="http://search.yahoo.com/mrss/" 
-      xmlns:content="http://purl.org/rss/1.0/modules/content/" 
-      xmlns:dc="http://purl.org/dc/elements/1.1/" 
-      version="2.0">
-<channel>
-<title>AI4Nerds</title>
-<link>https://ai4nerds.github.io/blog/llm/</link>
-<atom:link href="https://ai4nerds.github.io/blog/llm/index.xml" rel="self" type="application/rss+xml"/>
-<description></description>
-<generator>quarto-1.6.43</generator>
-<lastBuildDate>Mon, 21 Apr 2025 06:51:48 GMT</lastBuildDate>
-<item>
-  <title></title>
-  <link>https://ai4nerds.github.io/blog/llm/Different_Batching_in_llm_serving.html</link>
-  <description><![CDATA[ 
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.6.43">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>different_batching_in_llm_serving – AI4Nerds</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-7fd0fe4245b865325b8ce8dccb604d59.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-d78aecc9c95638c2005d74ac0a593d47.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../styles.css">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">AI4Nerds</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../about.html"> 
+<span class="menu-text">About Us</span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/ai4nerds/blog"> <i class="bi bi-github" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#llm-serving-methods-and-batching-techniques-a-comprehensive-guide" id="toc-llm-serving-methods-and-batching-techniques-a-comprehensive-guide" class="nav-link active" data-scroll-target="#llm-serving-methods-and-batching-techniques-a-comprehensive-guide">LLM Serving Methods and Batching Techniques: A Comprehensive Guide</a>
+  <ul class="collapse">
+  <li><a href="#table-of-contents" id="toc-table-of-contents" class="nav-link" data-scroll-target="#table-of-contents">Table of Contents</a></li>
+  <li><a href="#introduction-to-llm-serving" id="toc-introduction-to-llm-serving" class="nav-link" data-scroll-target="#introduction-to-llm-serving">Introduction to LLM Serving</a></li>
+  <li><a href="#why-batching-matters-in-llm-serving" id="toc-why-batching-matters-in-llm-serving" class="nav-link" data-scroll-target="#why-batching-matters-in-llm-serving">Why Batching Matters in LLM Serving</a>
+  <ul class="collapse">
+  <li><a href="#key-benefits-of-batching" id="toc-key-benefits-of-batching" class="nav-link" data-scroll-target="#key-benefits-of-batching">Key Benefits of Batching:</a></li>
+  </ul></li>
+  <li><a href="#overview-of-llm-serving-methods" id="toc-overview-of-llm-serving-methods" class="nav-link" data-scroll-target="#overview-of-llm-serving-methods">Overview of LLM Serving Methods</a>
+  <ul class="collapse">
+  <li><a href="#online-serving" id="toc-online-serving" class="nav-link" data-scroll-target="#online-serving">Online Serving</a></li>
+  <li><a href="#offline-serving" id="toc-offline-serving" class="nav-link" data-scroll-target="#offline-serving">Offline Serving</a></li>
+  <li><a href="#hybrid-serving" id="toc-hybrid-serving" class="nav-link" data-scroll-target="#hybrid-serving">Hybrid Serving</a></li>
+  </ul></li>
+  <li><a href="#batching-techniques-in-llm-serving" id="toc-batching-techniques-in-llm-serving" class="nav-link" data-scroll-target="#batching-techniques-in-llm-serving">Batching Techniques in LLM Serving</a>
+  <ul class="collapse">
+  <li><a href="#static-batching" id="toc-static-batching" class="nav-link" data-scroll-target="#static-batching">Static Batching</a></li>
+  <li><a href="#dynamic-batching" id="toc-dynamic-batching" class="nav-link" data-scroll-target="#dynamic-batching">Dynamic Batching</a></li>
+  <li><a href="#continuous-batching" id="toc-continuous-batching" class="nav-link" data-scroll-target="#continuous-batching">Continuous Batching</a></li>
+  <li><a href="#padded-batching" id="toc-padded-batching" class="nav-link" data-scroll-target="#padded-batching">Padded Batching</a></li>
+  <li><a href="#speculative-batching" id="toc-speculative-batching" class="nav-link" data-scroll-target="#speculative-batching">Speculative Batching</a></li>
+  <li><a href="#chunked-batching" id="toc-chunked-batching" class="nav-link" data-scroll-target="#chunked-batching">Chunked Batching</a></li>
+  <li><a href="#disaggregate-batching" id="toc-disaggregate-batching" class="nav-link" data-scroll-target="#disaggregate-batching">Disaggregate Batching</a></li>
+  </ul></li>
+  <li><a href="#comparison-of-batching-techniques" id="toc-comparison-of-batching-techniques" class="nav-link" data-scroll-target="#comparison-of-batching-techniques">Comparison of Batching Techniques</a>
+  <ul class="collapse">
+  <li><a href="#performance-metrics" id="toc-performance-metrics" class="nav-link" data-scroll-target="#performance-metrics">Performance Metrics</a></li>
+  <li><a href="#use-case-suitability" id="toc-use-case-suitability" class="nav-link" data-scroll-target="#use-case-suitability">Use Case Suitability</a></li>
+  <li><a href="#implementation-complexity" id="toc-implementation-complexity" class="nav-link" data-scroll-target="#implementation-complexity">Implementation Complexity</a></li>
+  </ul></li>
+  <li><a href="#challenges-and-trade-offs-in-batching" id="toc-challenges-and-trade-offs-in-batching" class="nav-link" data-scroll-target="#challenges-and-trade-offs-in-batching">Challenges and Trade-offs in Batching</a></li>
+  <li><a href="#best-practices-for-optimizing-llm-serving-with-batching" id="toc-best-practices-for-optimizing-llm-serving-with-batching" class="nav-link" data-scroll-target="#best-practices-for-optimizing-llm-serving-with-batching">Best Practices for Optimizing LLM Serving with Batching</a></li>
+  <li><a href="#future-trends-in-llm-serving-and-batching" id="toc-future-trends-in-llm-serving-and-batching" class="nav-link" data-scroll-target="#future-trends-in-llm-serving-and-batching">Future Trends in LLM Serving and Batching</a></li>
+  <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion">Conclusion</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
 
 
 
@@ -502,177 +639,366 @@
 </section>
 </section>
 
- ]]></description>
-  <guid>https://ai4nerds.github.io/blog/llm/Different_Batching_in_llm_serving.html</guid>
-  <pubDate>Mon, 21 Apr 2025 06:51:48 GMT</pubDate>
-</item>
-<item>
-  <title>Transformers From Scratch - Theory</title>
-  <link>https://ai4nerds.github.io/blog/llm/Transformers_from_scratch_1.html</link>
-  <description><![CDATA[ 
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp("https:\/\/ai4nerds\.github\.io\/blog");
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
 
 
 
 
-<section id="rnn-understanding" class="level2">
-<h2 class="anchored" data-anchor-id="rnn-understanding">RNN Understanding</h2>
-<p>Recurrent Neural Network (RNN) is a type of neural network designed to handle sequential data. Unlike traditional feedforward neural networks, RNNs have connections that form cycles, allowing information to be passed from one step of the sequence to the next. This structure enables RNNs to maintain a memory of previous inputs, making them suitable for tasks where context over time is important (like time-series forecasting, language modeling, etc.).</p>
-<div data-align="center">
-<p><img src="https://ai4nerds.github.io/blog/llm/images/Tranformers_from_scratch/RNN_Image.webp" alt="RNN Architecture" class="responsive-image" style="max-width: 100%; height: auto;"></p>
-</div>
-<section id="basic-mechanism" class="level3">
-<h3 class="anchored" data-anchor-id="basic-mechanism">Basic Mechanism:</h3>
-<ol type="1">
-<li><strong>Inputs</strong>: At each time step ( t ), an RNN receives an input vector $ (x_t) $.</li>
-<li><strong>Hidden State</strong>: The hidden state $ (h_t) $ is updated at each time step based on the current input $ (x_t) $ and the previous hidden state $ (h_{t-1}) $.</li>
-<li><strong>Output</strong>: The RNN generates an output at each time step, or a final output after processing the entire sequence.</li>
-</ol>
-<section id="mathematical-formulation" class="level4">
-<h4 class="anchored" data-anchor-id="mathematical-formulation">Mathematical Formulation:</h4>
-<ul>
-<li><p><strong>Hidden State</strong>:<br>
-<img src="https://latex.codecogs.com/png.latex?%20h_t%20=%20%5Ctext%7Bactivation%7D(W_h%20%5Ccdot%20h_%7Bt-1%7D%20+%20W_x%20%5Ccdot%20x_t)%20"></p></li>
-<li><p><strong>Output</strong>:<br>
-<img src="https://latex.codecogs.com/png.latex?%20y_t%20=%20W_y%20%5Ccdot%20h_t%20"></p></li>
-</ul>
-</section>
-</section>
-<section id="inputs-and-outputs" class="level3">
-<h3 class="anchored" data-anchor-id="inputs-and-outputs">Inputs and Outputs</h3>
-<ul>
-<li><p><strong>Inputs</strong>: RNNs take in a sequence of data. The input at each time step $ (x_t) $ can be a vector, representing things like a word in a sentence, a stock price in a time series, or a feature in a sequence of data.</p></li>
-<li><p><strong>Outputs</strong>:</p>
-<ul>
-<li>For <strong>sequence-to-sequence tasks</strong> (e.g., machine translation), RNNs produce a sequence of outputs.</li>
-<li>For <strong>many-to-one tasks</strong> (e.g., sentiment analysis), RNNs output a single value after processing the entire sequence.</li>
-</ul></li>
-</ul>
-</section>
-<section id="advantages-of-rnns" class="level3">
-<h3 class="anchored" data-anchor-id="advantages-of-rnns">Advantages of RNNs</h3>
-<ol type="1">
-<li><p><strong>Sequence Handling</strong>: RNNs are designed to handle sequential data, making them ideal for tasks like speech recognition, time-series forecasting, and natural language processing.</p></li>
-<li><p><strong>Context Retention</strong>: The hidden state allows RNNs to retain memory of previous inputs, enabling them to learn dependencies over time.</p></li>
-<li><p><strong>Flexible Input/Output Lengths</strong>: RNNs can process sequences of varying lengths, which is useful in many NLP and time-series tasks.</p></li>
-<li><p><strong>Parameter Sharing</strong>: The weights in an RNN are shared across all time steps, making the model more efficient in terms of size compared to fully connected networks.</p></li>
-</ol>
-</section>
-<section id="limitations-of-rnns" class="level3">
-<h3 class="anchored" data-anchor-id="limitations-of-rnns">Limitations of RNNs</h3>
-<ol type="1">
-<li><p><strong>Vanishing Gradient Problem</strong>: During backpropagation, gradients can become very small, making it difficult to learn long-term dependencies. This limits the effectiveness of RNNs on long sequences.</p></li>
-<li><p><strong>Exploding Gradient Problem</strong>: On the other hand, gradients can also grow excessively large, causing unstable training.</p></li>
-<li><p><strong>Difficulty with Long-Term Dependencies</strong>: RNNs struggle to learn and retain information over long sequences due to the vanishing gradient problem.</p></li>
-<li><p><strong>Slow Training</strong>: Training RNNs is computationally expensive and slow, as each time step depends on the previous one, making them hard to parallelize.</p></li>
-<li><p><strong>Limited Parallelism</strong>: Since RNNs process data sequentially, it’s challenging to parallelize computations effectively, which can hinder scalability.</p></li>
-</ol>
-</section>
-</section>
-<section id="attention" class="level2">
-<h2 class="anchored" data-anchor-id="attention">Attention</h2>
-<section id="what-is-attention" class="level3">
-<h3 class="anchored" data-anchor-id="what-is-attention">What is Attention?</h3>
-<p>Attention is a mechanism used in deep learning models, particularly in natural language processing (NLP) and computer vision, that allows the model to focus on specific parts of the input sequence when making predictions. Instead of processing the entire input equally, the attention mechanism helps the model determine which parts of the input are most important at each step.</p>
-<p>The idea behind attention is inspired by how humans process information: when we read a sentence or observe an image, we don’t give equal attention to every word or pixel. Instead, we focus on specific parts that are most relevant for understanding or making decisions. Attention in neural networks mimics this behavior by assigning different weights (or importance) to different elements in the input, based on the task at hand.</p>
-</section>
-<section id="need-for-attention" class="level3">
-<h3 class="anchored" data-anchor-id="need-for-attention">Need for Attention</h3>
-<ol type="1">
-<li><p><strong>Capturing Long-Term Dependencies</strong>:<br>
-Attention helps overcome the limitations of traditional RNNs and LSTMs by allowing models to focus on relevant parts of the input, even from distant positions in the sequence. This enables better learning of long-term dependencies in tasks like machine translation or text generation.</p></li>
-<li><p><strong>Improved Performance in Complex Tasks</strong>:<br>
-Attention improves model performance by enabling the focus on important parts of the input sequence, which is particularly useful for tasks such as machine translation, text summarization, and image captioning.</p></li>
-<li><p><strong>Parallelization</strong>:<br>
-Attention mechanisms, especially in architectures like Transformers, enable parallel processing of input sequences. This significantly speeds up training and inference compared to sequential models like RNNs, leading to more scalable solutions.</p></li>
-<li><p><strong>Interpretability</strong>:<br>
-Attention mechanisms provide insight into how the model makes predictions by highlighting the parts of the input it focuses on, which improves the interpretability of decisions, especially in complex tasks like machine translation.</p></li>
-<li><p><strong>Handling Variable-Length Sequences</strong>:<br>
-Attention can efficiently handle input sequences of varying lengths by dynamically weighing the importance of different parts of the sequence, making it ideal for tasks with unpredictable input sizes, such as NLP.</p></li>
-<li><p><strong>Flexibility Across Modalities</strong>:<br>
-Attention is versatile and can be applied to different data modalities, such as text, images, and videos. In tasks like image captioning, attention helps focus on specific objects or regions in the image, improving the quality of generated descriptions.</p></li>
-</ol>
-</section>
-</section>
-<section id="transformer-architecture" class="level2">
-<h2 class="anchored" data-anchor-id="transformer-architecture">Transformer Architecture</h2>
-<section id="overview" class="level3">
-<h3 class="anchored" data-anchor-id="overview">Overview</h3>
-<p>This is the basic transformer architecture</p>
-<div data-align="center">
-<p><img src="https://ai4nerds.github.io/blog/llm/images/Tranformers_from_scratch/Transformers_Architecture.webp" alt="Transformers Architecture"></p>
-</div>
-<p>It contains 2 macro-blocks:</p>
-<ul>
-<li>Encoder</li>
-<li>Decoder</li>
-<li>and a linear layer</li>
-</ul>
-<p>Now we will focus each and every part of this architecture in detail to getter better understanding of this architecture</p>
-</section>
-<section id="encoder" class="level3">
-<h3 class="anchored" data-anchor-id="encoder">Encoder</h3>
-<div data-align="center">
-<p><img src="https://ai4nerds.github.io/blog/llm/images/Tranformers_from_scratch/Encoder.webp" alt="Encoder Architecture"></p>
-</div>
-<p>These below are the different components of encoder * Input Embedding * Positional Encoding * Multi Head Attention * Layer Normalization * Feed Forward &amp; Add and Norm</p>
-<section id="input-embeddings" class="level4">
-<h4 class="anchored" data-anchor-id="input-embeddings">Input Embeddings</h4>
-<div data-align="center">
-<p><img src="https://ai4nerds.github.io/blog/llm/images/Tranformers_from_scratch/Input_Embedding.webp" alt="Input Embedding"></p>
-</div>
-<p>Input embeddings are a way to convert raw data (like words, sentences, or other types of input) into numerical representations that machine learning models can understand. They map each item in the input (e.g., a word) to a vector of numbers, capturing semantic meaning or relationships based on patterns learned from large datasets. For example, in natural language processing (NLP), words with similar meanings have similar embeddings, allowing the model to recognize context and relationships between them.</p>
-<div data-align="center">
-<p><img src="https://ai4nerds.github.io/blog/llm/images/Tranformers_from_scratch/Input_Embedding_numbers.webp" alt="Input Embedding in real" class="responsive-image" style="max-width: 100%; height: auto;"></p>
-</div>
-<ol type="1">
-<li>Tokenization: The first step in processing the sentence is tokenization. This involves breaking down the sentence into smaller pieces called tokens (which could be words, subwords, or characters, depending on the tokenizer). In this case, let’s assume that the tokenizer assigns unique integer IDs to each word.</li>
-</ol>
-<ul>
-<li><p>Example of tokenization:</p>
-<p>“Your” → Token ID 105 “cat” → Token ID 6587 “is” → Token ID 5475 “a” → Token ID 3578 “lovely” → Token ID 65 “cat” → Token ID 6587 (again)</p>
-<p>So, the sentence “Your cat is a lovely cat” might be tokenized into the following sequence of token IDs: [105, 6587, 5475, 342, 1234, 6587]</p></li>
-</ul>
-<ol start="2" type="1">
-<li>Embedding Layer: After tokenization, each token ID is mapped to a vector of real numbers in the embedding space. These vectors are high-dimensional representations that capture semantic properties of the tokens. In modern models like GPT, BERT, or similar, each token is represented as a vector with hundreds or thousands of dimensions.</li>
-</ol>
-<p>For example, let’s assume the embedding space is 512 dimensions in the above example. Each token ID from the sequence will be transformed into a 512-dimensional vector.</p>
-</section>
-<section id="positional-encoding" class="level4">
-<h4 class="anchored" data-anchor-id="positional-encoding">Positional Encoding:</h4>
-<p>Positional encoding is a technique used in Transformer models to inject information about the order of tokens in a sequence. Unlike traditional models (like RNNs), Transformers process all tokens in parallel, which means they don’t inherently understand the order of words in a sentence.</p>
-<p>To address this, positional encodings are added to the token embeddings to provide the model with information about the relative or absolute positions of words in the sequence. These encodings are vectors that are added to the word embeddings, and they typically use sinusoidal functions or learned embeddings.</p>
-<p>Need in Transformer Architecture:</p>
-<ul>
-<li><p>Order Awareness: Since Transformers process tokens simultaneously, they need a way to differentiate between, say, “cat chased dog” and “dog chased cat.” Positional encoding tells the model which token is first, second, etc.</p></li>
-<li><p>Contextual Understanding: By incorporating position information, the model can learn the relationships between tokens that depend on their position in the sentence, which is crucial for tasks like translation, summarization, and question answering.</p></li>
-</ul>
-<div data-align="center">
-<p><img src="https://ai4nerds.github.io/blog/llm/images/Tranformers_from_scratch/positional_encoding.webp" alt="position encoding" class="responsive-image" style="max-width: 100%; height: auto;"></p>
-</div>
-<p>We add a position embedding vector of size 512 to our original embedding. The values in the position encoding vector are calculated only once and reused for every sentence during training and inference.</p>
-<p>The sum of the embedding and position embedding gives us the encoder input. For the same word, the vector embedding is the same but the position embedding is different.</p>
-<p>Encoder input = Embedding + Position Embedding</p>
-<section id="how-are-position-embeddings-calculated" class="level5">
-<h5 class="anchored" data-anchor-id="how-are-position-embeddings-calculated">How are position embeddings calculated?</h5>
-<p align="center">
-<img src="https://ai4nerds.github.io/blog/llm/images/Tranformers_from_scratch/position_embedding.webp" alt="position encoding" class="responsive-image" style="max-width: 100%; height: auto;">
-</p>
-<p>For even positions in the position embedding (count starts from 0), we use the 1st formula, and for odd positions in the position embeddings, we use the 2nd formula. We do this for each of the 512 (d model) values of a position embedding, for each word/token in the sentence.</p>
-<p>So, the position embedding for every position in the sentence is the same, regardless of the sentence. It is the encoder input (sum of embedding and position embedding) that is unique. Therefore, we need to compute the positional encodings only once and then we can reuse them during training &amp; inference.</p>
-</section>
-<section id="why-are-trigonometric-functions-used-here" class="level5">
-<h5 class="anchored" data-anchor-id="why-are-trigonometric-functions-used-here">Why are trigonometric functions used here?</h5>
-<p>Trigonometric functions like sin and cos naturally represent a pattern that the model can recognize as continuous. So, it is easier for the model to see the relative positions of a word when using trigonometric functions.</p>
-
-
-</section>
-</section>
-</section>
-</section>
-
- ]]></description>
-  <guid>https://ai4nerds.github.io/blog/llm/Transformers_from_scratch_1.html</guid>
-  <pubDate>Mon, 21 Apr 2025 06:51:48 GMT</pubDate>
-</item>
-</channel>
-</rss>
+</body></html>
